@@ -13,10 +13,27 @@ const PORT = process.env.PORT || 4000;
 //Middleware para JSON
 app.use(express.json());
 
+// Middleware para datos tipo application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
 
 //Endpoint de prueba
 app.get('/', (req, res) =>{
-    res.json({message:'API funcionando'})
+    res.json({message:'API AUTH funcionando'})
+});
+
+//Endpoint de autenticación
+app.post('/auth', (req, res) =>{
+    let user = req.body.user;
+    let password = req.body.password;
+    console.log("Llega petición desde la API")
+    if (user == "admin" && password == 12345){
+        // Éxito 200 OK
+        res.status(200).json({ success: true, message: "Login correcto" });
+        
+    } else {
+        //Error 401 sin autorización
+        res.status(401).json({success: false, message: "Credenciales Inválidas"});
+    }
 });
 
 //Healthcheck (para kubernetes)
@@ -24,5 +41,5 @@ app.get('/healthz', (req,res)=>{res.sendStatus(200)});
 app.get('/ready', (req,res)=>{res.sendStatus(200)});
 
 app.listen(PORT, () =>{
-    console.log(`API corriendo en http://localhost:${PORT}`)
+    console.log(`Auth corriendo en http://localhost:${PORT}`)
 });
