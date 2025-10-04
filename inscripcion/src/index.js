@@ -23,3 +23,4 @@ app.get('/healthz', (req,res)=>{res.sendStatus(200)});
 app.get('/ready', (req,res)=>{res.sendStatus(200)});
 
 app.listen(PORT, () =>{console.log(`API Inscripción corriendo en http://localhost:${PORT}`)});
+
