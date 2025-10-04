@@ -4,14 +4,14 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
   const password = document.getElementById('password').value;
 
   try {
-    const res = await fetch('http://localhost:3000/login', {
+    const res = await fetch('http://localhost:3000/auth', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ email, password })
     });
 
     const data = await res.json();
-    if (data.token) {
+    if (data.success) {
       alert('Login exitoso');
       // Aquí puedes guardar el token o navegar a otra vista
     } else {
