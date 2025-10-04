@@ -23,10 +23,11 @@ app.get('/', (req, res) =>{
 
 //Endpoint de autenticación
 app.post('/auth', (req, res) =>{
-    let user = req.body.user;
+    let email = req.body.email;
     let password = req.body.password;
-    console.log("Llega petición desde la API")
-    if (user == "admin" && password == 12345){
+    
+    if (email === "user@email.com" && password === "12345"){
+        
         // Éxito 200 OK
         res.status(200).json({ success: true, message: "Login correcto" });
         
