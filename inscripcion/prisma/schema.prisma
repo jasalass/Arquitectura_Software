@@ -8,14 +8,128 @@ datasource db {
 }
 
 model asignatura {
-  id       Int    @id @default(autoincrement())
-  codigo   String @unique @db.VarChar(20)
-  nombre   String @db.VarChar(120)
-  creditos Int
+  id                                                              Int             @id @default(autoincrement())
+  codigo                                                          String          @unique @db.VarChar(10)
+  nombre                                                          String          @db.VarChar(120)
+  creditos                                                        Int
+  prerrequisito_prerrequisito_asignatura_idToasignatura           prerrequisito[] @relation("prerrequisito_asignatura_idToasignatura")
+  prerrequisito_prerrequisito_asignatura_requerida_idToasignatura prerrequisito[] @relation("prerrequisito_asignatura_requerida_idToasignatura")
+  seccion                                                         seccion[]
 }
 
 model profesor {
-  id     Int    @id @default(autoincrement())
-  rut    String @unique @db.VarChar(12)
-  nombre String @db.VarChar(120)
+  id              Int               @id @default(autoincrement())
+  rut             String            @unique @db.VarChar(15)
+  nombre          String            @db.VarChar(120)
+  email           String?           @db.VarChar(120)
+  seccion_docente seccion_docente[]
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model horario {
+  id          Int      @id @default(autoincrement())
+  seccion_id  Int
+  dia_semana  Int
+  hora_inicio DateTime @db.Time(6)
+  hora_fin    DateTime @db.Time(6)
+  sala_id     Int
+  sala        sala     @relation(fields: [sala_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  seccion     seccion  @relation(fields: [seccion_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([seccion_id, dia_semana, hora_inicio], map: "idx_horario_seccion")
+}
+
+model inscripcion {
+  id             Int                 @id @default(autoincrement())
+  seccion_id     Int
+  alumno_ref     String              @db.Uuid
+  estado         estado_inscripcion? @default(PREINSCRITA)
+  creada_en      DateTime?           @default(now()) @db.Timestamp(6)
+  actualizada_en DateTime?           @default(now()) @db.Timestamp(6)
+  seccion        seccion             @relation(fields: [seccion_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([alumno_ref, seccion_id])
+  @@index([alumno_ref, estado], map: "idx_inscripcion_alumno_estado")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model periodo {
+  id           Int             @id @default(autoincrement())
+  anio         Int
+  semestre     Int
+  fecha_inicio DateTime        @db.Date
+  fecha_fin    DateTime        @db.Date
+  estado       periodo_estado? @default(ACTIVO)
+  seccion      seccion[]
+
+  @@unique([anio, semestre])
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model prerrequisito {
+  id                                                           Int        @id @default(autoincrement())
+  asignatura_id                                                Int
+  asignatura_requerida_id                                      Int
+  asignatura_prerrequisito_asignatura_idToasignatura           asignatura @relation("prerrequisito_asignatura_idToasignatura", fields: [asignatura_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  asignatura_prerrequisito_asignatura_requerida_idToasignatura asignatura @relation("prerrequisito_asignatura_requerida_idToasignatura", fields: [asignatura_requerida_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([asignatura_id, asignatura_requerida_id])
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model sala {
+  id        Int       @id @default(autoincrement())
+  codigo    String    @unique @db.VarChar(20)
+  capacidad Int
+  horario   horario[]
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model seccion {
+  id                 Int               @id @default(autoincrement())
+  asignatura_id      Int
+  periodo_id         Int
+  codigo             String            @db.VarChar(10)
+  cupos_totales      Int               @default(0)
+  cupos_tomados      Int               @default(0)
+  cupos_lista_espera Int               @default(0)
+  horario            horario[]
+  inscripcion        inscripcion[]
+  asignatura         asignatura        @relation(fields: [asignatura_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  periodo            periodo           @relation(fields: [periodo_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  seccion_docente    seccion_docente[]
+
+  @@unique([asignatura_id, periodo_id, codigo])
+  @@index([periodo_id], map: "idx_seccion_periodo")
+}
+
+model seccion_docente {
+  id          Int          @id @default(autoincrement())
+  seccion_id  Int
+  profesor_id Int
+  rol         rol_docente? @default(TITULAR)
+  profesor    profesor     @relation(fields: [profesor_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  seccion     seccion      @relation(fields: [seccion_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([seccion_id, profesor_id, rol])
+}
+
+enum estado_inscripcion {
+  PREINSCRITA
+  INSCRITA
+  LISTA_ESPERA
+  RETIRADA
+  RECHAZADA
+}
+
+enum periodo_estado {
+  ACTIVO
+  CERRADO
+  PLANIFICACION
+}
+
+enum rol_docente {
+  TITULAR
+  AYUDANTE
+  INVITADO
 }
