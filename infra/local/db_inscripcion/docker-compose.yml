@@ -7,8 +7,6 @@ services:
       POSTGRES_DB: inscripciones
       POSTGRES_USER: appuser
       POSTGRES_PASSWORD: appsecret
-      # Opcional: ajusta autenticación inicial (por defecto ya queda bien)
-      # POSTGRES_INITDB_ARGS: "--auth-local=scram-sha-256 --auth-host=scram-sha-256"
     ports:
       - "5432:5432"                # si 5432 está ocupado, usa "5433:5432"
     volumes:
