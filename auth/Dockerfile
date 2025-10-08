@@ -8,5 +8,5 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NODE_ENV=production
-EXPOSE 3000
+EXPOSE 4000
 CMD ["node", "src/index.js"]
