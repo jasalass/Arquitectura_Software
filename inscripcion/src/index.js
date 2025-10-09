@@ -17,7 +17,7 @@ app.use(express.json());
 
 console.log('DB URL presente:', !!process.env.DATABASE_URL);
 //Endpoint prueba
-app.get('/health', async (req, res) => {
+app.get('/inscripcion/health', async (req, res) => {
   try {
     await prisma.$queryRaw`SELECT 1`;
     res.json({ status: 'ok', db: 'connected' });
@@ -27,7 +27,7 @@ app.get('/health', async (req, res) => {
   }
 });
 
-app.get('/asignaturas', async (_req, res) => {
+app.get('/inscripcion/asignaturas', async (_req, res) => {
   try {
     const rows = await prisma.$queryRaw`
       SELECT
@@ -51,7 +51,7 @@ app.get('/asignaturas', async (_req, res) => {
   }
 });
 
-app.post('/inscripciones', async (req, res) => {
+app.post('/inscripcion/inscripciones', async (req, res) => {
   const { alumnoRef, seccionId } = req.body;
   if (!alumnoRef || !seccionId) {
     return res.status(400).json({ error: 'alumnoRef y seccionId son requeridos' });
@@ -95,7 +95,7 @@ app.post('/inscripciones', async (req, res) => {
 });
 
 // GET /alumnos/:alumnoRef/asignaturas?periodoId=#
-app.get('/alumnos/:alumnoRef/asignaturas', async (req, res) => {
+app.get('/inscripcion/alumnos/:alumnoRef/asignaturas', async (req, res) => {
   const { alumnoRef } = req.params;
   const { periodoId } = req.query;
 
@@ -142,8 +142,8 @@ app.get('/alumnos/:alumnoRef/asignaturas', async (req, res) => {
 
 
 //Healthcheck (para kubernetes)
-app.get('/healthz', (req,res)=>{res.sendStatus(200)});
-app.get('/ready', (req,res)=>{res.sendStatus(200)});
+app.get('/inscripcion/healthz', (req,res)=>{res.sendStatus(200)});
+app.get('/inscripcion/ready', (req,res)=>{res.sendStatus(200)});
 
-app.listen(PORT, () =>{console.log(`API Inscripción corriendo en http://localhost:${PORT}`)});
+app.listen(PORT, () =>{console.log(`API Inscripción corriendo en http://localhost:${PORT}/inscripcion`)});
 
