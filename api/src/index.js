@@ -29,6 +29,15 @@ app.use(cors({
   allowedHeaders: ['Content-Type']
 }));
 
+// --------------------------------------------------------
+// 🔹 INSCRIPCION
+// --------------------------------------------------------
+app.use('/inscripcion', createProxyMiddleware({
+  target: INSCRIPCION_BASE_URL,      // http://localhost:5000
+  changeOrigin: true,
+  pathRewrite: { '^/inscripcion': '/inscripcion' }, // <— clave
+  logLevel: 'debug'                  // útil para ver qué URL está llamando
+}));
 
 // --------------------------------------------------------
 // Middlewares
@@ -46,6 +55,7 @@ app.get('/', (_req, res) => {
 // 🔹 AUTH
 // --------------------------------------------------------
 app.post('/auth', async (req, res) => {
+  console.log(req.body)
   try {
     const response = await fetch(AUTH_BASE_URL, {
       method: 'POST',
@@ -64,14 +74,27 @@ app.post('/auth', async (req, res) => {
   }
 });
 
-// --------------------------------------------------------
-// 🔹 INSCRIPCION
-// --------------------------------------------------------
-app.use('/inscripcion', createProxyMiddleware({
-  target: INSCRIPCION_BASE_URL,
-  changeOrigin: true,
-  pathRewrite: { '^/inscripcion': '' }
-}));
+app.post('/auth-id', async (req, res) => {
+  try {
+    let url_auth_id = AUTH_BASE_URL + "-id"
+    const response = await fetch(url_auth_id, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(req.body)
+    });
+
+    const data = await response.json();
+    res.status(response.status).json(data);
+  } catch (error) {
+    console.error('Error al contactar Auth:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Error al contactar el servicio de autenticación'
+    });
+  }
+});
+
+
 
 // --------------------------------------------------------
 // 🔹 HEALTH CHECKS
