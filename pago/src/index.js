@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 //Asignar puerto
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 7000;
 
 //Middleware para JSON
 app.use(express.json());
@@ -36,6 +36,12 @@ app.get('/', (req, res) =>{
         res.status(401).json({success: false, message: "Credenciales Inválidas"});
     }
 });*/
+
+//Módulo  Pago
+app.get("/hola", async (req, res) =>{
+  res.json({asda:"ajsnda"})
+})
+
 
 //Healthcheck (para kubernetes)
 app.get('/healthz', (req,res)=>{res.sendStatus(200)});
