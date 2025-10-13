@@ -13,9 +13,10 @@ const PORT = process.env.PORT || 3000;
 // URLs internas de los microservicios
 const AUTH_BASE_URL = process.env.AUTH_BASE_URL || 'http://localhost:4000/auth';
 const INSCRIPCION_BASE_URL = process.env.INSCRIPCION_BASE_URL || 'http://localhost:5000';
+const PAGO_BASE_URL = process.env.PAGO_BASE_URL || 'http://localhost:6000';
 
 // --------------------------------------------------------
-// 🟢 CONFIGURAR CORS
+// 🟢 CONFIGURAR CORS'
 // --------------------------------------------------------
 // Permite llamadas desde los orígenes donde corre tu frontend
 // (localhost o 127.0.0.1 en desarrollo)
@@ -93,6 +94,29 @@ app.post('/auth-id', async (req, res) => {
     });
   }
 });
+
+
+//Módulo  Pago
+
+
+app.get("/hola"), async (req, res) =>{
+  try {
+    let url_auth_id = PAGO_BASE_URL + "/hola"
+    const response = await fetch(url_auth_id, {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    
+    res.status(response.status).json(data);
+  } catch (error) {
+    console.error('Error al contactar Pago:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Error al contactar el servicio de pago'
+    });
+  }
+}
 
 
 
