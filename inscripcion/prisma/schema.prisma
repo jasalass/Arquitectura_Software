@@ -114,6 +114,12 @@ model seccion_docente {
   @@unique([seccion_id, profesor_id, rol])
 }
 
+model alumno_estado {
+  alumno_ref       String  @id @db.Uuid
+  matricula_pagada Boolean @default(false)
+  observacion      String?
+}
+
 enum estado_inscripcion {
   PREINSCRITA
   INSCRITA
