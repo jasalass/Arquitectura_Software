@@ -181,7 +181,7 @@ app.post('/inscripcion/inscripciones', async (req, res) => {
 });
 
 
-// GET /inscripcion/alumno-estado/:alumnoRef
+// GET /inscripcion/alumno-estado/:alumnoRef CONSULTAR ESTADO DE MATRICULA
 app.get('/inscripcion/alumno-estado/:alumnoRef', async (req, res) => {
   const { alumnoRef } = req.params;
   try {
