@@ -37,12 +37,6 @@ app.get('/', (req, res) =>{
     }
 });*/
 
-//Módulo  Pago
-app.get("/hola", async (req, res) =>{
-  res.json({asda:"ajsnda"})
-})
-
-
 //Healthcheck (para kubernetes)
 app.get('/healthz', (req,res)=>{res.sendStatus(200)});
 app.get('/ready', (req,res)=>{res.sendStatus(200)});

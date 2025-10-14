@@ -120,6 +120,32 @@ app.get("/hola"), async (req, res) =>{
 
 
 
+
+// --------------------------------------------------------
+// 🔹 Llamada directa al microservicio de PAGO (puerto 7000)
+// --------------------------------------------------------
+app.get('/hola', async (_req, res) => {
+  try {
+    const response = await fetch('http://localhost:7000/hola', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    // Parsear respuesta del microservicio
+    const data = await response.json();
+
+    // Reenviar la respuesta al cliente que llamó al gateway
+    res.status(response.status).json(data);
+
+  } catch (error) {
+    console.error('Error al contactar el servicio de pago:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Error al contactar el microservicio de pago'
+    });
+  }
+});
+
 // --------------------------------------------------------
 // 🔹 HEALTH CHECKS
 // --------------------------------------------------------
