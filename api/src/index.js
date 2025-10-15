@@ -10,10 +10,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// URLs internas de los microservicios
-const AUTH_BASE_URL = process.env.AUTH_BASE_URL || 'http://localhost:4000/auth';
-const INSCRIPCION_BASE_URL = process.env.INSCRIPCION_BASE_URL || 'http://localhost:5000';
-const PAGO_BASE_URL = process.env.PAGO_BASE_URL || 'http://localhost:6000';
+
+// En Docker usa nombres de servicio; en local puedes sobreescribir con .env
+const AUTH_BASE_URL        = process.env.AUTH_BASE_URL        || 'http://auth:4000/auth';
+const INSCRIPCION_BASE_URL = process.env.INSCRIPCION_BASE_URL || 'http://inscripcion:5000';
+const PAGO_BASE_URL        = process.env.PAGO_BASE_URL        || 'http://pago:7000';
+
 
 // --------------------------------------------------------
 // 🟢 CONFIGURAR CORS'
@@ -33,12 +35,15 @@ app.use(cors({
 // --------------------------------------------------------
 // 🔹 INSCRIPCION
 // --------------------------------------------------------
+// ⚠️ Express recorta el prefijo '/inscripcion' → req.url llega como '/health', '/asignaturas', etc.
+// Le volvemos a anteponer '/inscripcion' para que el micro reciba '/inscripcion/...'
 app.use('/inscripcion', createProxyMiddleware({
-  target: INSCRIPCION_BASE_URL,      // http://localhost:5000
+  target: INSCRIPCION_BASE_URL,         // ej: http://inscripcion:5000  (¡sin slash final!)
   changeOrigin: true,
-  pathRewrite: { '^/inscripcion': '/inscripcion' }, // <— clave
-  logLevel: 'debug'                  // útil para ver qué URL está llamando
+  pathRewrite: (path) => `/inscripcion${path}`,  // <- clave
+  logLevel: 'debug'
 }));
+
 
 // --------------------------------------------------------
 // Middlewares
@@ -56,69 +61,35 @@ app.get('/', (_req, res) => {
 // 🔹 AUTH
 // --------------------------------------------------------
 app.post('/auth', async (req, res) => {
-  console.log(req.body)
   try {
-    const response = await fetch(AUTH_BASE_URL, {
+    const r = await fetch(AUTH_BASE_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type':'application/json' },
       body: JSON.stringify(req.body)
     });
-
-    const data = await response.json();
-    res.status(response.status).json(data);
-  } catch (error) {
-    console.error('Error al contactar Auth:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Error al contactar el servicio de autenticación'
-    });
+    const data = await r.json();
+    res.status(r.status).json(data);
+  } catch (err) {
+    console.error('Auth error:', err);
+    res.status(500).json({ success:false, message:'Error al contactar Auth' });
   }
 });
 
 app.post('/auth-id', async (req, res) => {
   try {
-    let url_auth_id = AUTH_BASE_URL + "-id"
-    const response = await fetch(url_auth_id, {
+    const url = AUTH_BASE_URL.replace(/\/$/, '') + '-id'; // concatena -id
+    const r = await fetch(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type':'application/json' },
       body: JSON.stringify(req.body)
     });
-
-    const data = await response.json();
-    res.status(response.status).json(data);
-  } catch (error) {
-    console.error('Error al contactar Auth:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Error al contactar el servicio de autenticación'
-    });
+    const data = await r.json();
+    res.status(r.status).json(data);
+  } catch (err) {
+    console.error('Auth-id error:', err);
+    res.status(500).json({ success:false, message:'Error al contactar Auth' });
   }
 });
-
-
-//Módulo  Pago
-
-
-app.get("/hola"), async (req, res) =>{
-  try {
-    let url_auth_id = PAGO_BASE_URL + "/hola"
-    const response = await fetch(url_auth_id, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' }
-    });
-
-    
-    res.status(response.status).json(data);
-  } catch (error) {
-    console.error('Error al contactar Pago:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Error al contactar el servicio de pago'
-    });
-  }
-}
-
-
 
 
 // --------------------------------------------------------
