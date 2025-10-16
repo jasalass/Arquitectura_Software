@@ -237,15 +237,5 @@ Accede a **Adminer** en [http://localhost:8080](http://localhost:8080)
 [ PostgreSQL + Adminer ]
 ```
 
----
 
-## 🧩 Extensiones sugeridas (para práctica académica)
-
-- Implementar **JWT real** en el microservicio Auth.  
-- Proteger rutas del frontend con el token.  
-- Agregar **logging centralizado** (Winston / Pino).  
-- Crear un **módulo docente o administrativo** adicional.  
-- Desplegar en **AWS, Render o Railway** como entorno cloud.  
-
----
 
