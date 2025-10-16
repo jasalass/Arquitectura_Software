@@ -1,0 +1,7 @@
+{
+  "name": "Front_Indcripsiones",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
