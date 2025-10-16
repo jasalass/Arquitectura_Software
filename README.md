@@ -93,6 +93,8 @@ Arquitectura_Software/
 
 ## 🚀 Ejecución rápida
 
+Modificar el nombre de los archivos **.env.example** por **.env**
+
 Desde la carpeta raíz del proyecto:
 
 ```powershell
@@ -247,8 +249,3 @@ Accede a **Adminer** en [http://localhost:8080](http://localhost:8080)
 
 ---
 
-## 🏁 Conclusión
-
-Este sistema permite comprender **cómo se construye, despliega y orquesta** una arquitectura completa de microservicios con comunicación HTTP, base de datos relacional, automatización con scripts y un frontend moderno.
-
-> 💡 Ideal para estudiantes de **Arquitectura de Software**, **Desarrollo Fullstack** y **DevOps**, ya que replica un entorno real de trabajo con separación de responsabilidades, modularidad y escalabilidad.
