@@ -179,7 +179,7 @@ front:
   build:
     context: ./Front_Inscripciones
     dockerfile: Dockerfile
-  container_name: front-inscripciones
+  container_name: front
   ports:
     - "8100:80"
   depends_on:
@@ -326,5 +326,6 @@ Accede a Adminer → http://localhost:8080
 - [x] Scripts PowerShell funcionales (`dev-up` / `dev-down`)  
 - [x] Integración del Front Angular/Ionic (**puerto 8100**)  
 - [x] Conexión funcional entre Gateway y microservicios  
-- [x] Prisma conectado a PostgreSQL  
-- [ ] Pendiente: endpoints reales para pago y validaciones extras  
+- [x] Prisma conectado a PostgreSQL   
+
+---
