@@ -57,6 +57,19 @@ services:
       - pago
     networks:
       - utf_net
+  
+  front:
+    build:
+      context: ./Front_Inscripciones
+      dockerfile: Dockerfile
+    container_name: front
+    ports:
+      - "8100:80"
+    depends_on:
+      - api
+    networks:
+      - utf_net
+
 
 networks:
   utf_net:

@@ -22,15 +22,40 @@ const PAGO_BASE_URL        = process.env.PAGO_BASE_URL        || 'http://pago:70
 // --------------------------------------------------------
 // Permite llamadas desde los orígenes donde corre tu frontend
 // (localhost o 127.0.0.1 en desarrollo)
-const allowedOrigins = process.env.CORS_ORIGIN
-  ? process.env.CORS_ORIGIN.split(',').map(s => s.trim())
-  : ['http://127.0.0.1:5500', 'http://localhost:5500', 'http://localhost:5173'];
+// --- CORS DEV (colocar AL INICIO, antes de rutas/proxy) ---
+const allowedOrigins = new Set([
+  'http://localhost:4200',
+  'http://127.0.0.1:5500',
+  'http://localhost:5500',
+  'http://localhost:5173',
+  'http://localhost:8100',
+  'http://localhost:8090'
+]);
 
-app.use(cors({
-  origin: allowedOrigins,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type']
-}));
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+
+  // Permite sin Origin (curl/postman) y valida los orígenes del front en dev
+  if (!origin || allowedOrigins.has(origin)) {
+    if (origin) {
+      res.setHeader('Access-Control-Allow-Origin', origin);
+      res.setHeader('Vary', 'Origin'); // evita caches mezclados por origen
+    }
+
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Accept, X-Requested-With, Origin');
+
+
+  }
+
+  // Responder preflight y cortar
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+
+  next();
+});
+// --- fin CORS DEV ---
+
+
 
 // --------------------------------------------------------
 // 🔹 INSCRIPCION
