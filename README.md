@@ -29,14 +29,14 @@ Desarrollar un sistema modular que permita:
 | 💳 **Pago (Demo)** | Servicio simulado de comunicación. | 7000 | Node.js |
 | 🗄️ **PostgreSQL** | Base de datos principal. | 5433 → 5432 | PostgreSQL 16 |
 | 🌐 **Adminer** | Panel web para administrar la base de datos. | 8080 | PHP / Adminer |
-| 💻 **Frontend (Angular/Ionic)** | Capa visual del sistema; consume el Gateway. | 4200 | Angular 20 / Ionic 8 |
+| 💻 **Frontend (Angular/Ionic)** | Capa visual del sistema; consume el Gateway y microservicios. | **8100** | Angular 20 / Ionic 8 / **Nginx** |
 
 ---
 
 ## 🌍 Arquitectura general
 
 **Estructura funcional:**  
-Frontend Angular/Ionic (4200) → API Gateway (3000) → Microservicios (4000–7000) → Base de Datos PostgreSQL (5433)
+Frontend Angular/Ionic (8100) → API Gateway (3000) → Microservicios (4000–7000) → Base de Datos PostgreSQL (5433)
 
 **Flujo general:**  
 Frontend → API Gateway → Microservicios → Base de Datos
@@ -47,13 +47,13 @@ Frontend → API Gateway → Microservicios → Base de Datos
 
 | Servicio | Tipo | URL / Acceso | Descripción |
 |-----------|------|--------------|--------------|
-| 💻 Frontend Angular/Ionic | UI | [http://localhost:4200](http://localhost:4200) | Interfaz del usuario |
-| 🟩 API Gateway | Backend | [http://localhost:3000](http://localhost:3000) | Entrada a los microservicios |
-| 🔐 Auth | Backend | [http://localhost:4000](http://localhost:4000) | Servicio de autenticación |
-| 🎓 Inscripción | Backend | [http://localhost:5000/inscripcion](http://localhost:5000/inscripcion) | Servicio académico |
-| 💳 Pago (demo) | Backend | [http://localhost:7000/hola](http://localhost:7000/hola) | Endpoint de prueba |
+| 💻 Frontend Angular/Ionic | UI | **http://localhost:8100** | Interfaz de usuario integrada (**Docker/Nginx**) |
+| 🟩 API Gateway | Backend | http://localhost:3000 | Entrada a los microservicios |
+| 🔐 Auth | Backend | http://localhost:4000 | Servicio de autenticación |
+| 🎓 Inscripción | Backend | http://localhost:5000/inscripcion | Servicio académico |
+| 💳 Pago (demo) | Backend | http://localhost:7000/hola | Endpoint de prueba |
 | 🗄️ PostgreSQL | Base de datos | 127.0.0.1:5433 | Base de datos académica |
-| 🌐 Adminer | Herramienta DB | [http://localhost:8080](http://localhost:8080) | Panel visual de administración |
+| 🌐 Adminer | Herramienta DB | http://localhost:8080 | Panel visual de administración |
 
 ---
 
@@ -66,6 +66,8 @@ Arquitectura_Software/
 ├── inscripcion/             # Servicio académico (Prisma + PostgreSQL)
 ├── pago/                    # Servicio demo
 ├── Front_Inscripciones/     # Frontend Angular/Ionic
+│   ├── Dockerfile           # Build multi-stage + Nginx
+│   └── nginx.conf           # Reverse proxy/SPA routing
 ├── infra/
 │   └── local/db_inscripcion # Postgres + Adminer + seeds SQL
 ├── scripts/
@@ -89,7 +91,7 @@ Arquitectura_Software/
 
 ## 🚀 Ejecución rápida
 
-1. Modificar los archivos `.env.example` por `.env`
+1. Modificar los archivos `.env.example` por `.env` (API/Auth deben permitir `CORS_ORIGIN=http://localhost:8100`).
 2. Desde la carpeta raíz del proyecto:
 
 ```bash
@@ -98,19 +100,20 @@ cd scripts
 ```
 
 El script:
-- Crea red `utf_net`
+- Crea la red `utf_net`
 - Levanta Postgres y Adminer
 - Espera que la DB esté “healthy”
-- Construye imágenes y aplica migraciones Prisma
-- Levanta todos los servicios
+- Aplica migraciones Prisma
+- **Construye y levanta todos los servicios, incluyendo el Frontend Angular/Ionic (8100)**
 
 **Servicios disponibles:**
-- Adminer → http://localhost:8080
-- Postgres → 127.0.0.1:5433
-- Inscripción → http://localhost:5000/inscripcion/health
-- API Gateway → http://localhost:3000
-- Auth → http://localhost:4000
-- Pago → http://localhost:7000
+- 💻 Frontend → **http://localhost:8100**  
+- 🟩 API Gateway → http://localhost:3000  
+- 🔐 Auth → http://localhost:4000  
+- 🎓 Inscripción → http://localhost:5000/inscripcion/health  
+- 💳 Pago → http://localhost:7000  
+- 🌐 Adminer → http://localhost:8080  
+- 🗄️ Postgres → 127.0.0.1:5433  
 
 ### Apagar entorno
 
@@ -168,39 +171,103 @@ Cabeceras:
 
 ---
 
-## 💻 Frontend Angular/Ionic
+## 💻 Frontend Angular/Ionic (detalles)
 
-**Ejecución local:**
-```bash
-cd Front_Inscripciones
-npm install
-npm start
+### 1) Servicio `front` en `docker-compose.yml`
+```yaml
+front:
+  build:
+    context: ./Front_Inscripciones
+    dockerfile: Dockerfile
+  container_name: front-inscripciones
+  ports:
+    - "8100:80"
+  depends_on:
+    - api
+  networks:
+    - utf_net
 ```
 
-**Variables de entorno:**
+### 2) `Dockerfile` (multi-stage: build + Nginx)
+```Dockerfile
+# Etapa de build
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build  # genera /www (Ionic) o /dist/<app> (Angular)
+
+# Etapa de runtime con Nginx
+FROM nginx:1.27-alpine
+# elimina default y copia conf SPA
+RUN rm -f /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/app.conf
+
+# copia el artefacto (ajusta si tu build queda en /dist/APP)
+COPY --from=builder /app/www /usr/share/nginx/html
+
+# no root
+RUN adduser -D -H -u 1001 appuser  && chown -R appuser:appuser /usr/share/nginx/html /var/cache/nginx /var/run /var/log/nginx
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+### 3) `nginx.conf` (SPA + fallback a `index.html`)
+```nginx
+server {
+  listen 80;
+  server_name _;
+  root /usr/share/nginx/html;
+
+  # archivos estáticos
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+
+  # ejemplo de proxy opcional (si necesitas pasar directo al gateway)
+  # location /api/ {
+  #   proxy_pass http://api-gateway:3000/;
+  #   proxy_set_header Host $host;
+  #   proxy_set_header X-Real-IP $remote_addr;
+  #   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  # }
+}
+```
+
+### 4) Variables de entorno del Front
+`Front_Inscripciones/src/environments/environment.ts`
 ```ts
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000',
-  apiUrl2: 'http://localhost:4000'
+  apiUrl: 'http://localhost:3000', // API Gateway
+  authUrl: 'http://localhost:4000' // Auth (si lo consumes directo)
 };
 ```
 
-**Interfaces recomendadas:**
-```ts
-export interface UserPayload {
-  uuid: string; email: string; nombre: string; apellido: string;
-  rut: string; roles: string[]; permisos: string[];
-  carrera: string; plan: string; semestre_actual: number;
-  avatar_url: string; ultimo_acceso: string; estado_matricula: 'PAGADA'|'PENDIENTE'|'BLOQUEADA';
-}
+### 5) Requisitos de CORS (API/Auth)
+Configura los servicios para permitir:
 ```
+CORS_ORIGIN=http://localhost:8100
+```
+
+### 6) Ejecución local (desarrollo)
+```bash
+cd Front_Inscripciones
+npm install
+npm start    # o: ionic serve
+```
+> Para producción/stack completo usa `.\scripts\dev-up.ps1` (sirve el front con Nginx).
+
+### 7) Rutas del Front
+- El front debe consumir SIEMPRE el **Gateway** (`apiUrl`) para mantener el acoplamiento correcto.
+- Si necesitas WebSockets, expónlos también vía Gateway.
 
 ---
 
 ## 🧰 Administración de la base de datos
 
-Accede a Adminer → [http://localhost:8080](http://localhost:8080)
+Accede a Adminer → http://localhost:8080
 
 | Campo | Valor |
 |--------|-------|
@@ -209,6 +276,15 @@ Accede a Adminer → [http://localhost:8080](http://localhost:8080)
 | Usuario | appuser |
 | Contraseña | appsecret |
 | Base de datos | inscripciones |
+
+---
+
+## 🩺 Troubleshooting Front
+
+- **Pantalla en blanco tras refrescar ruta**: asegúrate del `try_files ... /index.html;` en `nginx.conf` y del `baseHref` correcto en `angular.json` (generalmente `/`).  
+- **CORS bloqueado**: revisa `CORS_ORIGIN=http://localhost:8100` en API/Auth.  
+- **No encuentra `www`/`dist`**: valida el comando de build (`npm run build`) y la carpeta de salida que copia el Dockerfile.  
+- **Iconos/Ionic no cargan**: confirma que los assets estén en `src/assets` y que `angular.json` los incluya.
 
 ---
 
@@ -223,14 +299,14 @@ Accede a Adminer → [http://localhost:8080](http://localhost:8080)
 | Persistencia independiente | Inscripción usa Postgres, Auth es in-memory |
 | Health Checks | /healthz y /ready en todos los servicios |
 | Automatización | Scripts dev-up.ps1 y dev-down.ps1 |
-| Frontend integrado | Angular/Ionic comunica todo mediante el Gateway |
+| Frontend integrado | Angular/Ionic servido por Nginx en 8100 |
 
 ---
 
 ## 🧭 Flujo general de comunicación
 
 ```text
-[ Usuario (Frontend) ]
+[ Usuario (Frontend Angular/Ionic) ]
         │
         ▼
 [ API Gateway (3000) ]
@@ -241,3 +317,14 @@ Accede a Adminer → [http://localhost:8080](http://localhost:8080)
         ▼
 [ PostgreSQL + Adminer ]
 ```
+
+---
+
+## ✅ Estado actual del proyecto
+
+- [x] Orquestación completa con Docker Compose  
+- [x] Scripts PowerShell funcionales (`dev-up` / `dev-down`)  
+- [x] Integración del Front Angular/Ionic (**puerto 8100**)  
+- [x] Conexión funcional entre Gateway y microservicios  
+- [x] Prisma conectado a PostgreSQL  
+- [ ] Pendiente: endpoints reales para pago y validaciones extras  
