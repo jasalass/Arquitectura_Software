@@ -3,18 +3,18 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root'
 })
-export class Autentificacion {
+export class ApiGateway {
   private baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
-  login(email: string, password: string): Observable<any> {
-    return this.http.post(`${this.baseUrl}/auth`, { email, password });
+  matriculaAuth(validacion:String): Observable<any> {
+
+    return this.http.post(`${this.baseUrl}/auth`, { validacion });
+
   };
   
 }
-

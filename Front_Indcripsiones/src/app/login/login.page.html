@@ -5,20 +5,33 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
+     <ion-label>
+        <h2>Ingrese todos los campos solicitados</h2>
+      </ion-label>
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-col size-md="6" size-sm="12">
         <form (submit)="submit()">
           <ion-item>
-            <ion-label position="floating">Correo electrónico</ion-label>
-            <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+             <ion-input
+                #emailInput
+                label="Correo Electrónico"
+                type="email"
+                [(ngModel)]="email"
+                name="email"
+                placeholder="email@domain.com">
+        </ion-input>
           </ion-item>
-
           <ion-item>
-            <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+            <ion-input
+              #passwordInput
+              type="password"
+              label="Contraseña"
+              [(ngModel)]="password"
+              name="password">
+              <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
           </ion-item>
-
           <ion-button expand="block" type="submit" class="ion-margin-top">
             Iniciar sesión
           </ion-button>
