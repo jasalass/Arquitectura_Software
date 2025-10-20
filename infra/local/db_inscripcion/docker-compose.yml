@@ -8,15 +8,17 @@ services:
       POSTGRES_USER: appuser
       POSTGRES_PASSWORD: appsecret
     ports:
-      - "5432:5432"                # si 5432 está ocupado, usa "5433:5432"
+      - "5433:5432"                    # host:container
     volumes:
       - pgdata_insc:/var/lib/postgresql/data
-      - ./initdb:/docker-entrypoint-initdb.d:ro   # scripts SQL iniciales
+      - ./initdb:/docker-entrypoint-initdb.d:ro  # scripts SQL iniciales (opcional)
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U appuser -d inscripciones"]
       interval: 5s
       timeout: 3s
-      retries: 10
+      retries: 15
+    networks:
+      - utf_net
 
   adminer:
     image: adminer:latest
@@ -27,6 +29,12 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+    networks:
+      - utf_net
 
 volumes:
   pgdata_insc:
+
+networks:
+  utf_net:
+    external: true

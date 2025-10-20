@@ -1,0 +1,76 @@
+services:
+  inscripcion:
+    build:
+      context: ./inscripcion
+      dockerfile: Dockerfile
+    container_name: svc-inscripcion
+    environment:
+      # Dentro de la red Docker, la DB es "postgres" (servicio del compose de infra)
+      DATABASE_URL: postgresql://appuser:appsecret@postgres:5432/inscripciones?schema=public
+      PORT: 5000
+    ports:
+      - "5000:5000"
+    # OJO: no pongas URLs aquí. Si quieres esperar a la DB, ya lo hace el script.
+    networks:
+      - utf_net
+
+  auth:
+    build:
+      context: ./auth
+      dockerfile: Dockerfile
+    container_name: svc-auth
+    environment:
+      PORT: 4000
+    ports:
+      - "4000:4000"
+    networks:
+      - utf_net
+
+  pago:
+    build:
+      context: ./pago
+      dockerfile: Dockerfile
+    container_name: svc-pago
+    environment:
+      PORT: 7000
+    ports:
+      - "7000:7000"
+    networks:
+      - utf_net
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    environment:
+      PORT: 3000
+      AUTH_BASE_URL: http://auth:4000/auth
+      INSCRIPCION_BASE_URL: http://inscripcion:5000
+      PAGO_BASE_URL: http://pago:7000
+      CORS_ORIGIN: http://localhost:5173,http://127.0.0.1:5500
+    ports:
+      - "3000:3000"
+    depends_on:
+      - inscripcion
+      - auth
+      - pago
+    networks:
+      - utf_net
+  
+  front:
+    build:
+      context: ./Front_Inscripciones
+      dockerfile: Dockerfile
+    container_name: front
+    ports:
+      - "8100:80"
+    depends_on:
+      - api
+    networks:
+      - utf_net
+
+
+networks:
+  utf_net:
+    external: true

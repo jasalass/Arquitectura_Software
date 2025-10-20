@@ -4,6 +4,10 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:3000',
+<<<<<<< HEAD:Front_Indcripsiones/src/environments/environment.ts
+=======
+  apiUrl2: 'http://localhost:4000' 
+>>>>>>> 4a409fd75b86379ef4cf2d8e7289bbef91ca1134:Front_Inscripciones/src/environments/environment.ts
 };
 /*
  * For easier debugging in development mode, you can import the following file

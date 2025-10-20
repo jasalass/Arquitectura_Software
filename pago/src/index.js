@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 //Asignar puerto
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 7000;
 
 //Middleware para JSON
 app.use(express.json());
