@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front
+  namespace: utf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+        - name: front
+          image: jsalass045/front-inscripciones:v1.0.0
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: front
+  namespace: utf
+spec:
+  selector:
+    app: front
+  ports:
+    - port: 80
+      targetPort: 80
