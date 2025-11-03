@@ -1,42 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Inicio de sesión</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openHelp()">
+        Ayuda
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <ion-item>
+    <ion-input formControlName="email" type="email" placeholder="email@domain.com"></ion-input>
+  </ion-item>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-     <ion-label>
-        <h2>Ingrese todos los campos solicitados</h2>
-      </ion-label>
-  <ion-grid>
-    <ion-row class="ion-justify-content-center">
-      <ion-col size-md="6" size-sm="12">
-        <form (submit)="submit()">
-          <ion-item>
-             <ion-input
-                #emailInput
-                label="Correo Electrónico"
-                type="email"
-                [(ngModel)]="email"
-                name="email"
-                placeholder="email@domain.com">
-        </ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input
-              #passwordInput
-              type="password"
-              label="Contraseña"
-              [(ngModel)]="password"
-              name="password">
-              <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-        </ion-input>
-          </ion-item>
-          <ion-button expand="block" type="submit" class="ion-margin-top">
-            Iniciar sesión
-          </ion-button>
-        </form>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>
+  <ion-item>
+    <ion-input formControlName="password" type="password">
+      <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+    </ion-input>
+  </ion-item>
+
+  <ion-button expand="block" type="submit" [disabled]="form.invalid">Iniciar sesión</ion-button>
+</form>
