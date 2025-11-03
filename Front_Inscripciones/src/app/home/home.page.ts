@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { asignaturasAlumno } from '../Service/api-gateway';
 
 @Component({
   selector: 'app-home',
