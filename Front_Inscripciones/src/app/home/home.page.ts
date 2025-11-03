@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
-import { asignaturasAlumno } from '../Service/api-gateway';
+import { ApiGateway } from '../Service/api-gateway';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +9,7 @@ import { asignaturasAlumno } from '../Service/api-gateway';
   imports: [IonHeader, IonToolbar, IonTitle, IonContent],
 })
 export class HomePage {
+  private api = new ApiGateway();
+  
   constructor() {}
 }
