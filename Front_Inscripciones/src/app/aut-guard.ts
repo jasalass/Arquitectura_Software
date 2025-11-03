@@ -3,12 +3,19 @@ import { inject } from '@angular/core';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
-  const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
 
-  if (!isLoggedIn) {
+  const registrado = sessionStorage.getItem('registrado') === 'true';
+  const matriculaPagada = sessionStorage.getItem('matriculaPagada') === 'true';
+
+  if (!registrado) {
     router.navigate(['/login']);
     return false;
   }
 
-  return true;
+  if (!matriculaPagada) {
+    router.navigate(['/pago']);
+    return false;
+  }
+
+  return true; // acceso permitido a rutas protegidas
 };

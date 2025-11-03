@@ -15,9 +15,12 @@ export const routes: Routes = [
   {
     path: 'login',
     loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
-  },  {
+  },
+  {
     path: 'pago-matricula',
-    loadComponent: () => import('./pago-matricula/pago-matricula.page').then( m => m.PagoMatriculaPage)
+    loadComponent: () => import('./pago-matricula/pago-matricula.page').then( m => m.PagoMatricula),
+    canActivate: [authGuard]
+
   }
 
 ];
