@@ -6,7 +6,7 @@ import { ApiGateway } from '../../app/Service/api-gateway';
   templateUrl: './inscritas.page.html',
   styleUrls: ['./inscritas.page.scss'],
 })
-export class VerInscritasPage implements OnInit {
+export class InscritasPage implements OnInit {
   alumnoRef = 'demo-1';
   inscritas: any[] = [];
 

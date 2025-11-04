@@ -21,7 +21,8 @@ export const routes: Routes = [
     loadComponent: () => import('./pago-matricula/pago-matricula').then( m => m.PagoMatricula),
     canActivate: [authGuard]
 
-  },  {
+  },
+  {
     path: 'resultado',
     loadComponent: () => import('./resultado/resultado.page').then( m => m.ResultadoPage)
   },
