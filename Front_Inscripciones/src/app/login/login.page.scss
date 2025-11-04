@@ -1,0 +1,27 @@
+.demo-usuarios {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #d1d1d1;
+  font-size: 0.95rem;
+
+  h4 {
+    color: #4da3ff;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+
+  .demo-user {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 0.6rem;
+
+    p {
+      margin: 0.2rem 0;
+      font-size: 0.9rem;
+    }
+  }
+}

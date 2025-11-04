@@ -58,6 +58,7 @@ export class HomePage implements OnInit, OnDestroy {
     this.sub = this.authState.user$.subscribe(u => {
       const changedUser = u?.uuid !== this.user?.uuid;
       this.user = u;
+      this.estadoFinanciero = u?.estado_matricula ?? 'PENDIENTE';
 
       if (!u) {
         // sin sesión: limpia UI

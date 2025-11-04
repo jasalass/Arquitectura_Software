@@ -55,10 +55,9 @@
             </ion-grid>
 
             <div class="profile-actions">
-              <ion-button *ngIf="estadoFinanciero !== 'PAGADA'"
-                          (click)="pagar()" [disabled]="loadingPago" color="success">
-                <ion-icon slot="start" name="cash-outline"></ion-icon>
-                {{ loadingPago ? 'Procesando pago...' : 'Pagar matrícula' }}
+              <!-- Solo mostrar si la matrícula no está pagada -->
+              <ion-button *ngIf="estadoFinanciero !== 'PAGADA'" (click)="pagar()" [disabled]="loadingPago">
+                {{ loadingPago ? 'Procesando pago…' : 'Pagar matrícula' }}
               </ion-button>
 
               <ion-button color="medium" fill="outline" (click)="logout()">
@@ -66,6 +65,7 @@
                 Cerrar sesión
               </ion-button>
             </div>
+
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -125,18 +125,15 @@
                         </div>
 
                         <div class="td" role="cell">
-                          <ion-badge
-                            [color]="isSeccionInscrita(s.id) ? 'success' :
+                          <ion-badge [color]="isSeccionInscrita(s.id) ? 'success' :
                                       (((s.cupos_totales ?? 0) - (s.cupos_tomados ?? 0)) > 0 ? 'primary' : 'medium')">
                             {{ isSeccionInscrita(s.id) ? 'Inscrita' :
-                               (((s.cupos_totales ?? 0) - (s.cupos_tomados ?? 0)) > 0 ? 'Disponible' : 'Sin cupos') }}
+                            (((s.cupos_totales ?? 0) - (s.cupos_tomados ?? 0)) > 0 ? 'Disponible' : 'Sin cupos') }}
                           </ion-badge>
                         </div>
 
                         <div class="td action" role="cell">
-                          <ion-button
-                            size="small"
-                            [disabled]="isSeccionInscrita(s.id)
+                          <ion-button size="small" [disabled]="isSeccionInscrita(s.id)
                                         || estadoFinanciero !== 'PAGADA'
                                         || loadingInscribir[s.id]
                                         || (((s.cupos_totales ?? 0) - (s.cupos_tomados ?? 0)) <= 0)"
@@ -145,8 +142,8 @@
                               [name]="isSeccionInscrita(s.id) ? 'checkmark-circle-outline' : 'add-circle-outline'">
                             </ion-icon>
                             {{
-                              isSeccionInscrita(s.id) ? 'Ya inscrita'
-                                : (loadingInscribir[s.id] ? 'Inscribiendo…' : 'Inscribir')
+                            isSeccionInscrita(s.id) ? 'Ya inscrita'
+                            : (loadingInscribir[s.id] ? 'Inscribiendo…' : 'Inscribir')
                             }}
                           </ion-button>
                         </div>
