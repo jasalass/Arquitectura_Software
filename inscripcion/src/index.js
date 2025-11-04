@@ -30,25 +30,62 @@ app.get("/inscripcion/health", async (_req, res) => {
   }
 });
 
-// -----------------------------------------------------------------------------
-// GET /inscripcion/asignaturas  (con prerrequisitos)
-// -----------------------------------------------------------------------------
 app.get("/inscripcion/asignaturas", async (_req, res) => {
   try {
     const rows = await prisma.$queryRaw`
+      WITH periodo_activo AS (
+        SELECT id
+        FROM periodo
+        WHERE estado = 'ACTIVO'
+        LIMIT 1
+      ),
+      secciones_disp AS (
+        SELECT DISTINCT
+          s.id,
+          s.codigo,
+          s.cupos_totales,
+          s.cupos_tomados,
+          (s.cupos_totales - s.cupos_tomados) AS cupos_disponibles,
+          s.asignatura_id
+        FROM seccion s
+        JOIN periodo_activo pa ON pa.id = s.periodo_id
+        WHERE (s.cupos_totales - s.cupos_tomados) > 0
+      ),
+      aggr AS (
+        SELECT
+          a.id,
+          a.codigo,
+          a.nombre,
+          a.creditos,
+          COALESCE(
+            jsonb_agg(
+              jsonb_build_object(
+                'id', s.id,
+                'codigo', s.codigo,
+                'cupos_totales', s.cupos_totales,
+                'cupos_tomados', s.cupos_tomados,
+                'cupos_disponibles', s.cupos_disponibles
+              )
+            ) FILTER (WHERE s.id IS NOT NULL),
+            '[]'::jsonb
+          ) AS secciones
+        FROM asignatura a
+        LEFT JOIN secciones_disp s ON s.asignatura_id = a.id
+        GROUP BY a.id, a.codigo, a.nombre, a.creditos
+      )
       SELECT
-        a.id, a.codigo, a.nombre, a.creditos,
+        g.id, g.codigo, g.nombre, g.creditos, g.secciones,
         COALESCE(
-          json_agg(
-            DISTINCT jsonb_build_object('id', ar.id, 'codigo', ar.codigo, 'nombre', ar.nombre)
-          ) FILTER (WHERE ar.id IS NOT NULL),
-          '[]'::json
+          jsonb_agg(
+            jsonb_build_object('id', ar.id, 'codigo', ar.codigo, 'nombre', ar.nombre)
+          ) FILTER (WHERE pr.asignatura_id IS NOT NULL),
+          '[]'::jsonb
         ) AS prerequisitos
-      FROM asignatura a
-      LEFT JOIN prerrequisito pr ON pr.asignatura_id = a.id
+      FROM aggr g
+      LEFT JOIN prerrequisito pr ON pr.asignatura_id = g.id
       LEFT JOIN asignatura   ar ON ar.id = pr.asignatura_requerida_id
-      GROUP BY a.id
-      ORDER BY a.codigo;
+      GROUP BY g.id, g.codigo, g.nombre, g.creditos, g.secciones
+      ORDER BY g.codigo;
     `;
     res.json(rows);
   } catch (e) {
@@ -205,7 +242,8 @@ app.post("/inscripcion/inscripciones", async (req, res) => {
 });
 
 // -----------------------------------------------------------------------------
-// GET /inscripcion/alumno-estado/:alumnoRef  (CONSULTA estado de matrícula)
+// GET /inscripcion/alumno-estado/:alumnoRef
+// Consulta el estado financiero del alumno (mapeado a formato frontend)
 // -----------------------------------------------------------------------------
 app.get("/inscripcion/alumno-estado/:alumnoRef", async (req, res) => {
   const { alumnoRef } = req.params;
@@ -216,11 +254,15 @@ app.get("/inscripcion/alumno-estado/:alumnoRef", async (req, res) => {
     });
 
     if (!estado) {
-      return res
-        .status(404)
-        .json({ error: "Alumno no encontrado en el registro financiero" });
+      return res.status(404).json({ error: "Alumno no encontrado en el registro financiero" });
     }
-    res.json(estado);
+
+    // Devuelve el formato que el frontend espera
+    return res.json({
+      alumno_ref: estado.alumno_ref,
+      estado_matricula: estado.matricula_pagada ? "PAGADA" : "PENDIENTE",
+      observacion: estado.observacion,
+    });
   } catch (e) {
     console.error(e);
     res.status(500).json({ error: "Error al obtener el estado del alumno" });
@@ -228,7 +270,8 @@ app.get("/inscripcion/alumno-estado/:alumnoRef", async (req, res) => {
 });
 
 // -----------------------------------------------------------------------------
-// PATCH /inscripcion/alumno-estado/:alumnoRef  (UPSERT estado de matrícula)
+// PATCH /inscripcion/alumno-estado/:alumnoRef
+// Actualiza o inserta el estado de matrícula del alumno
 // -----------------------------------------------------------------------------
 app.patch("/inscripcion/alumno-estado/:alumnoRef", async (req, res) => {
   const { alumnoRef } = req.params;
@@ -240,12 +283,18 @@ app.patch("/inscripcion/alumno-estado/:alumnoRef", async (req, res) => {
       update: { matricula_pagada, observacion },
       create: { alumno_ref: alumnoRef, matricula_pagada, observacion },
     });
-    res.json(actualizado);
+
+    return res.json({
+      alumno_ref: actualizado.alumno_ref,
+      estado_matricula: actualizado.matricula_pagada ? "PAGADA" : "PENDIENTE",
+      observacion: actualizado.observacion,
+    });
   } catch (e) {
     console.error(e);
     res.status(400).json({ error: "No se pudo actualizar el estado del alumno" });
   }
 });
+
 
 // -----------------------------------------------------------------------------
 // Healthchecks (para orquestadores)
