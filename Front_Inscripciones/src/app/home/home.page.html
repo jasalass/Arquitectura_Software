@@ -4,21 +4,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="home-content">
-  <div id="container" class="ion-padding">
-    <h2>Bienvenido al Sistema de Inscripción</h2>
-    <p>Selecciona una opción para continuar:</p>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h2>Bienvenido al Sistema de Inscripción</h2>
+  <p>Selecciona una opción para continuar:</p>
 
-    <ion-button expand="block" color="tertiary" (click)="irAAsignaturas()">
-      📚 Ver Asignaturas Disponibles
-    </ion-button>
+  <ion-button expand="block" color="tertiary" (click)="irAAsignaturas()">
+    📘 Ver Asignaturas e Inscribirse
+  </ion-button>
 
-    <ion-button expand="block" color="success" (click)="irAInscritas()">
-      🧾 Ver Ramos Inscritos
-    </ion-button>
+  <ion-button expand="block" color="success" (click)="irAInscritas()">
+    🧾 Ver Ramos Inscritos
+  </ion-button>
 
-    <ion-button expand="block" color="warning" (click)="irAAceptar()">
-      ✅ Aceptar / Confirmar Inscripción
-    </ion-button>
-  </div>
+  <ion-button expand="block" color="warning" (click)="irAPagoMatricula()">
+    💳 Pago Matrícula
+  </ion-button>
 </ion-content>

@@ -12,17 +12,16 @@ import { Router } from '@angular/router';
 export class HomePage {
   private router = inject(Router);
 
-  constructor() {}
-
+  // Navegar a las diferentes páginas
   irAAsignaturas() {
-    this.router.navigate(['/ver-asignaturas']);
+    this.router.navigate(['/asignaturas']);
   }
 
   irAInscritas() {
     this.router.navigate(['/ver-inscritas']);
   }
 
-  irAAceptar() {
-    this.router.navigate(['/aceptar-ramos']);
+  irAPagoMatricula() {
+    this.router.navigate(['/pago-matricula']);
   }
 }
