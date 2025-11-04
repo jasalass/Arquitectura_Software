@@ -41,7 +41,7 @@ const DEMO_USERS = [
     apellido: "Gómez",
     rut: "9.876.543-2",
     roles: ["ALUMNO"],
-    permisos: ["ver-estado"],
+    permisos: ["inscribir", "pagar", "ver-estado"],
     carrera: "Administración",
     plan: "Plan 2026",
     semestre_actual: 1,
