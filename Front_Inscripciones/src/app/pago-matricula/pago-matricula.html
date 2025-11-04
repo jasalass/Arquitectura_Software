@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Pago Matrícula</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-content">
+  <div class="card">
+    <h2>Pagar matrícula</h2>
+
+    <ion-item class="input-item">
+      <ion-label position="floating">RUT</ion-label>
+      <ion-input [(ngModel)]="rut"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="primary" (click)="irAResultado()" [disabled]="!rut">
+      Continuar a Resultado
+    </ion-button>
+  </div>
+</ion-content>

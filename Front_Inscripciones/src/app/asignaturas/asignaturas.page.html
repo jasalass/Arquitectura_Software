@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Asignaturas e Inscripción</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Sección 1: Asignaturas disponibles -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>📚 Asignaturas Disponibles</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let a of asignaturasDisponibles">
+          <ion-label>
+            <h2>{{ a.codigo }} - {{ a.nombre }}</h2>
+            <p>{{ a.creditos }} créditos</p>
+          </ion-label>
+          <ion-button slot="end" color="primary" (click)="inscribir(a)" [disabled]="cargando">
+            Inscribir
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Sección 2: Ramos ya inscritos -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>🧾 Ramos Inscritos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngIf="asignaturasInscritas.length > 0; else noInscritas">
+        <ion-item *ngFor="let i of asignaturasInscritas">
+          <ion-label>
+            <h2>{{ i.codigo }} - {{ i.nombre }}</h2>
+            <p>Créditos: {{ i.creditos }} | Sección: {{ i.seccion_id }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ng-template #noInscritas>
+        <ion-text color="medium">
+          <p>No tienes ramos inscritos aún.</p>
+        </ion-text>
+      </ng-template>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Sección 3: Confirmar inscripción -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>✅ Confirmar Inscripción</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Cuando hayas inscrito todos tus ramos, confirma para finalizar el proceso.</p>
+      <ion-button expand="block" color="success" (click)="confirmar()" [disabled]="!asignaturasInscritas.length">
+        Confirmar Inscripción
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Mensaje general -->
+  <ion-text color="medium" *ngIf="mensaje">
+    <p class="ion-text-center">{{ mensaje }}</p>
+  </ion-text>
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Resultado Pago</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-content">
+  <div class="card">
+    <h2>Resultado de Pago</h2>
+
+    <div *ngIf="matriculaPagada">
+      <p>✅ Matrícula pagada con éxito para RUT: <strong>{{ rut }}</strong></p>
+    </div>
+
+    <div *ngIf="!matriculaPagada">
+      <p>❌ No se pudo procesar el pago para RUT: <strong>{{ rut }}</strong></p>
+    </div>
+
+    <ion-button expand="block" color="primary" (click)="irHome()">
+      Volver al Home
+    </ion-button>
+
+    <ion-button expand="block" color="secondary" (click)="irPagoMatricula()">
+      Volver a Pago Matrícula
+    </ion-button>
+  </div>
+</ion-content>

@@ -4,7 +4,8 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:3000',
-  apiUrl2: 'http://localhost:4000' 
+  apiUrl2: 'http://localhost:4000' ,
+  apiUrl3: 'http://localhost:7000'
 };
 /*
  * For easier debugging in development mode, you can import the following file

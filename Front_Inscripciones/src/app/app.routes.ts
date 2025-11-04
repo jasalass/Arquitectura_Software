@@ -18,9 +18,21 @@ export const routes: Routes = [
   },
   {
     path: 'pago-matricula',
-    loadComponent: () => import('./pago-matricula/pago-matricula.page').then( m => m.PagoMatricula),
+    loadComponent: () => import('./pago-matricula/pago-matricula').then( m => m.PagoMatricula),
     canActivate: [authGuard]
 
+  },  {
+    path: 'resultado',
+    loadComponent: () => import('./resultado/resultado.page').then( m => m.ResultadoPage)
+  },
+  {
+    path: 'asignaturas',
+    loadComponent: () => import('./asignaturas/asignaturas.page').then( m => m.AsignaturasPage)
+  },
+  {
+    path: 'inscritas',
+    loadComponent: () => import('./inscritas/inscritas.page').then( m => m.InscritasPage)
   }
+
 
 ];

@@ -13,9 +13,11 @@ export const authGuard: CanActivateFn = (route, state) => {
   }
 
   if (!matriculaPagada) {
-    router.navigate(['/pago']);
-    return false;
-  }
+  router.navigate(['/pago-matricula']); // 🔹 importante
+  return false;
+}
+
+
 
   return true; // acceso permitido a rutas protegidas
 };

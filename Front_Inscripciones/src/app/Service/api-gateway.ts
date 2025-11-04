@@ -186,4 +186,9 @@ private MOCK_ESTADO_BY_ALUMNO: Record<string, any> = {
     });
     return { headers };
   }
+
+confirmarInscripcion(): Observable<any> {
+  return this.http.post<any>(`${this.base}/pago-matricula`, { estado_inscripcion: true });
+}
+
 }

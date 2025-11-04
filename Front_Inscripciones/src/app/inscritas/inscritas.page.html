@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Ramos Inscritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let i of inscritas">
+      <ion-label>
+        <h2>{{ i.codigo }} - {{ i.nombre }}</h2>
+        <p>Créditos: {{ i.creditos }} | Sección: {{ i.seccion_id }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-text color="medium" *ngIf="!inscritas.length">
+    <p>No tienes ramos inscritos aún.</p>
+  </ion-text>
+</ion-content>

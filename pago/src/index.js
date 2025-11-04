@@ -21,21 +21,14 @@ app.get('/', (req, res) =>{
     res.json({message:'API Pago funcionando'})
 });
 
-//Endpoint de autenticación
-/*app.post('/auth', (req, res) =>{
-    let email = req.body.email;
-    let password = req.body.password;
-    
-    if (email === "user@email.com" && password === "12345"){
-        
-        // Éxito 200 OK
-        res.status(200).json({ success: true, message: "Login correcto" });
-        
-    } else {
-        //Error 401 sin autorización
-        res.status(401).json({success: false, message: "Credenciales Inválidas"});
-    }
-});*/
+// Nuevo endpoint para cambiar estado_inscripcion
+app.post('/pago-matricula', (req, res) => {
+    const { estado_inscripcion } = req.body;
+    // aquí simulas guardar o actualizar el estado
+    const nuevoEstado = !!estado_inscripcion;
+    res.json({ success: true, estado_inscripcion: nuevoEstado });
+});
+
 
 //Healthcheck (para kubernetes)
 app.get('/healthz', (req,res)=>{res.sendStatus(200)});
