@@ -6,22 +6,15 @@
 
 <ion-content class="ion-padding custom-content">
   <div class="card">
-    <h2>Resultado de Pago</h2>
+    <h2>Pago de Matrícula</h2>
 
-    <div *ngIf="matriculaPagada">
-      <p>✅ Matrícula pagada con éxito para RUT: <strong>{{ rut }}</strong></p>
-    </div>
+    <ion-item>
+      <ion-label position="floating">RUT del Alumno</ion-label>
+      <ion-input [(ngModel)]="rut" placeholder="Ej: 12345678-9"></ion-input>
+    </ion-item>
 
-    <div *ngIf="!matriculaPagada">
-      <p>❌ No se pudo procesar el pago para RUT: <strong>{{ rut }}</strong></p>
-    </div>
-
-    <ion-button expand="block" color="primary" (click)="irHome()">
-      Volver al Home
-    </ion-button>
-
-    <ion-button expand="block" color="secondary" (click)="irPagoMatricula()">
-      Volver a Pago Matrícula
+    <ion-button expand="block" color="primary" (click)="realizarPago()">
+      Pagar Matrícula
     </ion-button>
   </div>
 </ion-content>
