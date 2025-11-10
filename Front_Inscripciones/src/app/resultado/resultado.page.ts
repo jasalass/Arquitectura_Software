@@ -34,19 +34,19 @@ export class ResultadoPage {
   }
 
   realizarPago() {
-    this.apipago.confirmarPagoMatricula(this.rut).subscribe({
+    if (!this.rut) {
+      alert('Por favor ingrese el RUT');
+      return;
+    }
+
+    this.apiGateway.pagarMatricula(this.rut).subscribe({
       next: res => {
-        if (res.success) {
-          sessionStorage.setItem('matriculaPagada', 'true');
-          this.matriculaPagada = true;
-        } else {
-          this.matriculaPagada = false;
-          alert(res.message);
-        }
+        // Asumimos que si no hay error, el pago fue exitoso
+        this.router.navigate(['/resultado'], { state: { rut: this.rut } });
       },
       error: err => {
-        console.error(err);
-        alert('Error al procesar el pago');
+        console.error('Error al pagar matrícula:', err);
+        alert('No se pudo procesar el pago, intente nuevamente');
       }
     });
   }
