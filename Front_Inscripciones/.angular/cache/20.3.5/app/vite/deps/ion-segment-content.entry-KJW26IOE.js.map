@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/@ionic/core/dist/esm/ion-segment-content.entry.js"],
+  "sourcesContent": ["/*!\n * (C) Ionic http://ionicframework.com - MIT License\n */\nimport { r as registerInstance, h, d as Host } from './index-C8IsBmNU.js';\n\nconst segmentContentCss = \":host{scroll-snap-align:center;scroll-snap-stop:always;-ms-flex-negative:0;flex-shrink:0;width:100%;min-height:1px;overflow-y:scroll;scrollbar-width:none;-ms-overflow-style:none;}:host::-webkit-scrollbar{display:none}\";\n\nconst SegmentContent = class {\n    constructor(hostRef) {\n        registerInstance(this, hostRef);\n    }\n    render() {\n        return (h(Host, { key: 'db6876f2aee7afa1ea8bc147337670faa68fae1c' }, h(\"slot\", { key: 'bc05714a973a5655668679033f5809a1da6db8cc' })));\n    }\n};\nSegmentContent.style = segmentContentCss;\n\nexport { SegmentContent as ion_segment_content };\n"],
+  "mappings": ";;;;;;;;AAKA,IAAM,oBAAoB;AAE1B,IAAM,iBAAiB,MAAM;AAAA,EACzB,YAAY,SAAS;AACjB,qBAAiB,MAAM,OAAO;AAAA,EAClC;AAAA,EACA,SAAS;AACL,WAAQ,EAAE,MAAM,EAAE,KAAK,2CAA2C,GAAG,EAAE,QAAQ,EAAE,KAAK,2CAA2C,CAAC,CAAC;AAAA,EACvI;AACJ;AACA,eAAe,QAAQ;",
+  "names": []
+}
