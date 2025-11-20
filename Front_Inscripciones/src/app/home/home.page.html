@@ -1,0 +1,180 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Portal académico — Universidad Futuro Tecnológico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+
+    <!-- PERFIL -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header class="profile-header">
+            <div class="profile-header-content">
+              <ion-avatar class="profile-avatar">
+                <img [src]="user?.avatar_url || 'assets/img/default-avatar.svg'" alt="avatar">
+              </ion-avatar>
+              <div class="profile-text">
+                <h2>{{ user?.nombre }} {{ user?.apellido }}</h2>
+                <p class="email">{{ user?.email }}</p>
+                <ion-badge
+                  [color]="estadoFinanciero === 'PAGADA' ? 'success' : (estadoFinanciero === 'BLOQUEADA' ? 'danger' : 'warning')"
+                  class="estado-badge">
+                  {{ loadingEstado ? 'Cargando…' : ('Matrícula ' + (estadoFinanciero || '—')) }}
+                </ion-badge>
+              </div>
+            </div>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="6">
+                  <ion-icon name="card-outline"></ion-icon>
+                  <strong> RUT:</strong> {{ user?.rut }}
+                </ion-col>
+                <ion-col size="6">
+                  <ion-icon name="school-outline"></ion-icon>
+                  <strong> Carrera:</strong> {{ user?.carrera }}
+                </ion-col>
+                <ion-col size="6">
+                  <ion-icon name="book-outline"></ion-icon>
+                  <strong> Plan:</strong> {{ user?.plan }}
+                </ion-col>
+                <ion-col size="6">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <strong> Semestre:</strong> {{ user?.semestre_actual }}
+                </ion-col>
+                <ion-col size="12">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  <strong> Último acceso:</strong> {{ user?.ultimo_acceso }}
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+            <div class="profile-actions">
+              <!-- Solo mostrar si la matrícula no está pagada -->
+              <ion-button *ngIf="estadoFinanciero !== 'PAGADA'" (click)="pagar()" [disabled]="loadingPago">
+                {{ loadingPago ? 'Procesando pago…' : 'Pagar matrícula' }}
+              </ion-button>
+
+              <ion-button color="medium" fill="outline" (click)="logout()">
+                <ion-icon slot="start" name="log-out-outline"></ion-icon>
+                Cerrar sesión
+              </ion-button>
+            </div>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- OFERTA ACADÉMICA -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="title-row">
+              <ion-icon name="library-outline" class="title-icon"></ion-icon>
+              Oferta académica — Período vigente
+            </ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+
+            <div *ngIf="loadingAsignaturas" class="loading-block">
+              <ion-spinner name="crescent"></ion-spinner>
+              <span>Cargando asignaturas…</span>
+            </div>
+
+            <div *ngIf="!loadingAsignaturas && (asignaturas?.length || 0) > 0" class="asig-list">
+              <ion-card class="asig-card" *ngFor="let asig of asignaturas; trackBy: trackByAsig">
+                <div class="asig-card-header">
+                  <div class="asig-title">
+                    <ion-icon name="book-outline"></ion-icon>
+                    <strong class="asig-code">{{ asig.codigo }}</strong>
+                    <span class="asig-name">— {{ asig.nombre }}</span>
+                  </div>
+                  <ion-badge color="tertiary" *ngIf="asig?.creditos">{{ asig.creditos }} créditos</ion-badge>
+                </div>
+
+                <ng-container *ngIf="(asig.secciones?.length || 0) > 0; else noSecciones">
+                  <div class="secciones-table" role="table" aria-label="Secciones disponibles">
+                    <div class="thead" role="rowgroup">
+                      <div class="tr" role="row">
+                        <div class="th" role="columnheader">Sección</div>
+                        <div class="th" role="columnheader">Cupos</div>
+                        <div class="th" role="columnheader">Estado</div>
+                        <div class="th action" role="columnheader"></div>
+                      </div>
+                    </div>
+
+                    <div class="tbody" role="rowgroup">
+                      <div class="tr" role="row" *ngFor="let s of asig.secciones">
+                        <div class="td" role="cell">
+                          <ion-chip color="medium" outline="true">
+                            <ion-icon name="layers-outline"></ion-icon>
+                            <ion-label>Sec. {{ s.codigo || s.id }}</ion-label>
+                          </ion-chip>
+                        </div>
+
+                        <div class="td" role="cell">
+                          {{ ((s.cupos_totales ?? 0) - (s.cupos_tomados ?? 0)) }}
+                        </div>
+
+                        <div class="td" role="cell">
+                          <ion-badge [color]="isSeccionInscrita(s.id) ? 'success' :
+                                      (((s.cupos_totales ?? 0) - (s.cupos_tomados ?? 0)) > 0 ? 'primary' : 'medium')">
+                            {{ isSeccionInscrita(s.id) ? 'Inscrita' :
+                            (((s.cupos_totales ?? 0) - (s.cupos_tomados ?? 0)) > 0 ? 'Disponible' : 'Sin cupos') }}
+                          </ion-badge>
+                        </div>
+
+                        <div class="td action" role="cell">
+                          <ion-button size="small" [disabled]="isSeccionInscrita(s.id)
+                                        || estadoFinanciero !== 'PAGADA'
+                                        || loadingInscribir[s.id]
+                                        || (((s.cupos_totales ?? 0) - (s.cupos_tomados ?? 0)) <= 0)"
+                            (click)="inscribir(s.id)">
+                            <ion-icon slot="start"
+                              [name]="isSeccionInscrita(s.id) ? 'checkmark-circle-outline' : 'add-circle-outline'">
+                            </ion-icon>
+                            {{
+                            isSeccionInscrita(s.id) ? 'Ya inscrita'
+                            : (loadingInscribir[s.id] ? 'Inscribiendo…' : 'Inscribir')
+                            }}
+                          </ion-button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="note warning" *ngIf="estadoFinanciero !== 'PAGADA'">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    Debes tener la matrícula pagada para inscribir asignaturas.
+                  </div>
+                </ng-container>
+
+                <ng-template #noSecciones>
+                  <div class="note muted">
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                    Sin secciones disponibles para esta asignatura en el período activo.
+                  </div>
+                </ng-template>
+              </ion-card>
+            </div>
+
+            <div *ngIf="!loadingAsignaturas && (asignaturas?.length || 0) === 0" class="empty">
+              <ion-icon name="archive-outline"></ion-icon>
+              <p>No hay asignaturas disponibles para inscripción en este período.</p>
+            </div>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

@@ -133,3 +133,11 @@ enum rol_docente {
   AYUDANTE
   INVITADO
 }
+
+model AlumnoEstado {
+  alumno_ref       String  @id @db.Uuid
+  matricula_pagada Boolean @default(false)
+  observacion      String? @db.Text
+
+  @@map("alumno_estado") // nombre real de la tabla en Postgres
+}
