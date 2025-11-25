@@ -10,134 +10,172 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// ==================================================
+//  URLs internas (Docker) de microservicios
+// ==================================================
+const AUTH_BASE_URL        = (process.env.AUTH_BASE_URL        || 'http://auth:4000/auth').replace(/\/$/, '');
+const INSCRIPCION_BASE_URL = (process.env.INSCRIPCION_BASE_URL || 'http://inscripcion:5000').replace(/\/$/, '');
+const PAGO_BASE_URL        = (process.env.PAGO_BASE_URL        || 'http://pago:7000').replace(/\/$/, '');
 
-// En Docker usa nombres de servicio; en local puedes sobreescribir con .env
-const AUTH_BASE_URL        = process.env.AUTH_BASE_URL        || 'http://auth:4000/auth';
-const INSCRIPCION_BASE_URL = process.env.INSCRIPCION_BASE_URL || 'http://inscripcion:5000';
-const PAGO_BASE_URL        = process.env.PAGO_BASE_URL        || 'http://pago:7000';
+// Logs de arranque para verificar
+console.log('🔧 AUTH_BASE_URL        =', AUTH_BASE_URL);
+console.log('🔧 INSCRIPCION_BASE_URL =', INSCRIPCION_BASE_URL);
+console.log('🔧 PAGO_BASE_URL        =', PAGO_BASE_URL);
 
+// ==================================================
+//  CORS
+// ==================================================
+const rawCorsOrigins = process.env.CORS_ORIGIN || '';
+const allowedOrigins = rawCorsOrigins
+  .split(',')
+  .map(o => o.trim())
+  .filter(o => o.length > 0);
 
-// --------------------------------------------------------
-// 🟢 CONFIGURAR CORS'
-// --------------------------------------------------------
-// Permite llamadas desde los orígenes donde corre tu frontend
-// (localhost o 127.0.0.1 en desarrollo)
-// --- CORS DEV (colocar AL INICIO, antes de rutas/proxy) ---
-const allowedOrigins = new Set([
-  'http://localhost:4200',
-  'http://127.0.0.1:5500',
-  'http://localhost:5500',
-  'http://localhost:5173',
-  'http://localhost:8100',
-  'http://localhost:8090'
-]);
+console.log('🔧 CORS_ORIGIN =', allowedOrigins);
 
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
-
-  // Permite sin Origin (curl/postman) y valida los orígenes del front en dev
-  if (!origin || allowedOrigins.has(origin)) {
-    if (origin) {
-      res.setHeader('Access-Control-Allow-Origin', origin);
-      res.setHeader('Vary', 'Origin'); // evita caches mezclados por origen
-    }
-
-    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Accept, X-Requested-With, Origin');
-
-
-  }
-
-  // Responder preflight y cortar
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-
-  next();
-});
-// --- fin CORS DEV ---
-
-
-
-// --------------------------------------------------------
-// 🔹 INSCRIPCION
-// --------------------------------------------------------
-// ⚠️ Express recorta el prefijo '/inscripcion' → req.url llega como '/health', '/asignaturas', etc.
-// Le volvemos a anteponer '/inscripcion' para que el micro reciba '/inscripcion/...'
-app.use('/inscripcion', createProxyMiddleware({
-  target: INSCRIPCION_BASE_URL,         // ej: http://inscripcion:5000  (¡sin slash final!)
-  changeOrigin: true,
-  pathRewrite: (path) => `/inscripcion${path}`,  // <- clave
-  logLevel: 'debug'
+app.use(cors({
+  origin: (origin, callback) => {
+    // Permitir Postman, curl, etc. (sin Origin)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error('Origen no permitido por CORS: ' + origin), false);
+  },
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'X-Requested-With', 'Origin'],
+  credentials: true,
 }));
 
-
-// --------------------------------------------------------
-// Middlewares
-// --------------------------------------------------------
 app.use(express.json());
 
-// --------------------------------------------------------
-// Endpoint de prueba
-// --------------------------------------------------------
+// ==================================================
+//  Endpoint raíz
+// ==================================================
 app.get('/', (_req, res) => {
   res.json({ message: '🟢 API Gateway funcionando correctamente' });
 });
 
-// --------------------------------------------------------
-// 🔹 AUTH
-// --------------------------------------------------------
+// ==================================================
+//  🔹 AUTH
+// ==================================================
 app.post('/auth', async (req, res) => {
   try {
     const r = await fetch(AUTH_BASE_URL, {
       method: 'POST',
-      headers: { 'Content-Type':'application/json' },
-      body: JSON.stringify(req.body)
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(req.body),
     });
-    const data = await r.json();
+
+    const data = await r.json().catch(() => ({}));
     res.status(r.status).json(data);
   } catch (err) {
     console.error('Auth error:', err);
-    res.status(500).json({ success:false, message:'Error al contactar Auth' });
+    res.status(500).json({ success: false, message: 'Error al contactar Auth' });
   }
 });
 
 app.post('/auth-id', async (req, res) => {
   try {
-    const url = AUTH_BASE_URL.replace(/\/$/, '') + '-id'; // concatena -id
+    const url = `${AUTH_BASE_URL}-id`; // ej: http://auth:4000/auth-id
     const r = await fetch(url, {
       method: 'POST',
-      headers: { 'Content-Type':'application/json' },
-      body: JSON.stringify(req.body)
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(req.body),
     });
-    const data = await r.json();
+
+    const data = await r.json().catch(() => ({}));
     res.status(r.status).json(data);
   } catch (err) {
     console.error('Auth-id error:', err);
-    res.status(500).json({ success:false, message:'Error al contactar Auth' });
+    res.status(500).json({ success: false, message: 'Error al contactar Auth' });
   }
 });
 
-
-// --------------------------------------------------------
-// 🔹 PAGO (puerto 7000)
-// --------------------------------------------------------
-// 
-app.use('/pago', createProxyMiddleware({
-  target: PAGO_BASE_URL,             //  http://pago:7000 
+// ==================================================
+//  🔹 INSCRIPCION (proxy)
+// ==================================================
+//
+// Llega /inscripcion/... al gateway.
+// Express recorta el prefijo y http-proxy-middleware recibe p.ej. "/health".
+// Volvemos a anteponer "/inscripcion" para el micro.
+app.use('/inscripcion', createProxyMiddleware({
+  target: INSCRIPCION_BASE_URL,  // http://inscripcion:5000
   changeOrigin: true,
-  pathRewrite: (path) => `/pago${path}`, // vuelve a anteponer '/pago'
-  logLevel: 'debug'
+  pathRewrite: (path) => `/inscripcion${path}`,
+  logLevel: 'debug',
 }));
 
+// ==================================================
+//  🔹 PAGO  (solución definitiva)
+// ==================================================
+//
+// Dejamos de usar proxy aquí para evitar problemas de reescritura y
+// manejamos las rutas a pago usando fetch, que ya validamos que funciona
+// dentro del contenedor con http://pago:7000.
+const basePago = PAGO_BASE_URL;  // ej: http://pago:7000
 
-// --------------------------------------------------------
-// 🔹 HEALTH CHECKS
-// --------------------------------------------------------
+// GET /pago/estado/:uuid
+app.get('/pago/estado/:uuid', async (req, res) => {
+  try {
+    const { uuid } = req.params || {};
+    if (!uuid) {
+      return res.status(400).json({ success: false, message: 'uuid es requerido' });
+    }
+
+    const url = `${basePago}/pago/estado/${uuid}`;
+    console.log('➡️  Gateway → Pago (estado):', url);
+
+    const r = await fetch(url);
+    const text = await r.text();
+    let data;
+    try { data = JSON.parse(text); } catch { data = { raw: text }; }
+
+    console.log('⬅️  Pago → Gateway status:', r.status, 'respuesta:', data);
+    return res.status(r.status).json(data);
+  } catch (err) {
+    console.error('❌ Error en /pago/estado desde gateway:', err);
+    return res.status(500).json({
+      success: false,
+      message: 'Error al contactar el servicio de pago desde el gateway',
+    });
+  }
+});
+
+// POST /pago/pagar-matricula
+app.post('/pago/pagar-matricula', async (req, res) => {
+  try {
+    const url = `${basePago}/pago/pagar-matricula`;
+    console.log('➡️  Gateway → Pago (pagar-matricula):', url, 'body:', req.body);
+
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(req.body),
+    });
+
+    const text = await r.text();
+    let data;
+    try { data = JSON.parse(text); } catch { data = { raw: text }; }
+
+    console.log('⬅️  Pago → Gateway status:', r.status, 'respuesta:', data);
+    return res.status(r.status).json(data);
+  } catch (err) {
+    console.error('❌ Error en /pago/pagar-matricula desde gateway:', err);
+    return res.status(500).json({
+      success: false,
+      message: 'Error al contactar el servicio de pago desde el gateway',
+    });
+  }
+});
+
+// ==================================================
+//  Health checks del gateway
+// ==================================================
 app.get('/healthz', (_req, res) => res.sendStatus(200));
-app.get('/ready', (_req, res) => res.sendStatus(200));
+app.get('/ready',   (_req, res) => res.sendStatus(200));
 
-// --------------------------------------------------------
-// Iniciar servidor
-// --------------------------------------------------------
+// ==================================================
+//  Iniciar servidor
+// ==================================================
 app.listen(PORT, () => {
-  console.log(`✅ API corriendo en http://localhost:${PORT}`);
+  console.log(`✅ API Gateway corriendo en http://localhost:${PORT}`);
 });

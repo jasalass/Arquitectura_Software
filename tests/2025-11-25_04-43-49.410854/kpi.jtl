@@ -1,0 +1,1097 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,success,bytes,grpThreads,allThreads,Latency,Hostname,Connect
+1764056664409,71,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,806,1,1,67,Juan,46
+1764056664820,111,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,1023,1,1,110,Juan,0
+1764056665242,77,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,503,2,2,77,Juan,2
+1764056665344,12,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,806,2,2,12,Juan,1
+1764056665623,16,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,374,2,2,16,Juan,1
+1764056665667,8,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,1023,2,2,8,Juan,0
+1764056665944,32,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,385,2,2,32,Juan,1
+1764056665985,27,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,503,2,2,27,Juan,1
+1764056666282,33,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,426,4,4,33,Juan,0
+1764056666315,44,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,374,4,4,44,Juan,1
+1764056666344,16,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,806,4,4,16,Juan,1
+1764056666344,17,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,806,4,4,17,Juan,1
+1764056666618,6,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,806,4,4,6,Juan,0
+1764056666664,13,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,1023,4,4,13,Juan,0
+1764056666664,14,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,1023,4,4,13,Juan,0
+1764056666665,25,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,385,4,4,25,Juan,1
+1764056666967,32,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,1023,4,4,31,Juan,0
+1764056666993,29,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,426,4,4,29,Juan,0
+1764056666979,101,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,503,6,6,101,Juan,1
+1764056666979,118,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,503,6,6,118,Juan,1
+1764056667325,22,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,806,6,6,22,Juan,0
+1764056667312,56,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,503,6,6,56,Juan,1
+1764056667369,205,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,806,6,6,205,Juan,1
+1764056667371,214,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,806,6,6,214,Juan,1
+1764056667386,266,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,374,6,6,266,Juan,3
+1764056667652,19,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,1023,6,6,19,Juan,0
+1764056667413,269,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,374,6,6,269,Juan,2
+1764056667683,100,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,374,6,6,100,Juan,1
+1764056667887,25,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,1023,6,6,25,Juan,0
+1764056667905,21,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,1023,6,6,21,Juan,0
+1764056667956,207,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,385,7,7,207,Juan,6
+1764056667985,205,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,385,7,7,205,Juan,1
+1764056667987,227,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,503,7,7,227,Juan,2
+1764056668102,227,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,385,7,7,227,Juan,5
+1764056668215,181,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,503,7,7,181,Juan,1
+1764056668229,197,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,503,7,7,196,Juan,2
+1764056668474,9,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,426,7,7,9,Juan,0
+1764056668502,10,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,426,7,7,10,Juan,0
+1764056668389,219,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,806,7,7,219,Juan,1
+1764056668643,9,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,426,7,7,9,Juan,0
+1764056668518,228,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,374,7,7,227,Juan,2
+1764056668787,15,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,806,7,7,15,Juan,0
+1764056668816,11,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,806,7,7,11,Juan,0
+1764056668704,217,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,374,7,7,217,Juan,1
+1764056668731,221,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,374,7,7,220,Juan,2
+1764056668915,39,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,1023,7,7,39,Juan,0
+1764056668957,22,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,806,7,7,22,Juan,0
+1764056669115,19,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,1023,9,9,19,Juan,0
+1764056669129,33,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,1023,9,9,33,Juan,0
+1764056669061,205,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,385,9,9,205,Juan,4
+1764056669284,29,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,1023,9,9,29,Juan,0
+1764056669227,241,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,385,9,9,241,Juan,2
+1764056669254,275,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,385,9,9,275,Juan,1
+1764056669268,295,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,503,9,9,295,Juan,1
+1764056669573,21,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,426,9,9,21,Juan,0
+1764056669398,365,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,806,9,9,365,Juan,2
+1764056669398,369,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,806,9,9,369,Juan,2
+1764056669778,12,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,426,9,9,12,Juan,0
+1764056669441,407,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,503,9,9,406,Juan,1
+1764056669835,18,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,426,9,9,18,Juan,0
+1764056669471,388,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,503,9,9,388,Juan,1
+1764056669906,37,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,806,9,9,37,Juan,0
+1764056670103,38,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,806,11,11,38,Juan,0
+1764056670158,31,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,806,11,11,31,Juan,0
+1764056670073,125,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,1023,11,11,125,Juan,0
+1764056670073,125,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,1023,11,11,125,Juan,0
+1764056669617,653,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,503,11,11,653,Juan,2
+1764056670256,26,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,1023,11,11,26,Juan,0
+1764056669879,492,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,374,11,11,492,Juan,1
+1764056670444,13,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,1023,11,11,13,Juan,0
+1764056670160,314,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,374,11,11,313,Juan,1
+1764056670173,327,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,374,11,11,326,Juan,1
+1764056670502,21,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,1023,11,11,20,Juan,0
+1764056670403,343,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,806,11,11,343,Juan,1
+1764056670404,345,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,806,11,11,345,Juan,1
+1764056670504,385,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,503,11,11,385,Juan,1
+1764056670504,385,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,503,11,11,385,Juan,1
+1764056670572,446,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,374,11,11,445,Juan,2
+1764056670589,456,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,503,11,11,456,Juan,2
+1764056671050,23,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,1023,11,11,23,Juan,0
+1764056671063,34,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,1023,11,11,34,Juan,0
+1764056670681,514,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,385,12,12,514,Juan,1
+1764056670780,523,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,385,12,12,523,Juan,1
+1764056670767,546,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,503,12,12,545,Juan,1
+1764056670809,558,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,385,12,12,558,Juan,1
+1764056670837,605,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,503,12,12,605,Juan,1
+1764056671507,55,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,426,12,12,55,Juan,0
+1764056671611,8,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,426,12,12,8,Juan,0
+1764056671670,17,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,426,12,12,16,Juan,0
+1764056671193,584,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,374,12,12,584,Juan,2
+1764056671195,586,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,374,12,12,586,Juan,2
+1764056671871,17,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,806,12,12,17,Juan,0
+1764056671924,9,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,806,12,12,9,Juan,0
+1764056672000,19,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,806,12,12,18,Juan,0
+1764056671322,720,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,385,12,12,719,Juan,2
+1764056671350,818,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,374,14,14,818,Juan,1
+1764056671379,813,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,503,14,14,813,Juan,1
+1764056672198,35,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,1023,14,14,35,Juan,0
+1764056672240,22,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,1023,14,14,21,Juan,0
+1764056671409,861,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,806,14,14,861,Juan,3
+1764056671409,875,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,503,14,14,874,Juan,1
+1764056672328,22,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,1023,14,14,22,Juan,0
+1764056672356,10,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,426,14,14,10,Juan,0
+1764056671625,807,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,374,14,14,807,Juan,1
+1764056671754,744,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,374,14,14,744,Juan,1
+1764056672574,50,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,1023,14,14,50,Juan,0
+1764056672674,11,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,806,14,14,11,Juan,0
+1764056672082,726,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,385,14,14,726,Juan,1
+1764056672096,719,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,385,14,14,719,Juan,2
+1764056672987,28,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,1023,14,14,28,Juan,0
+1764056673115,33,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,426,16,16,33,Juan,0
+1764056673129,37,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,426,16,16,37,Juan,0
+1764056672429,823,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,806,16,16,823,Juan,2
+1764056672432,825,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,806,16,16,825,Juan,2
+1764056672473,906,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,385,16,16,906,Juan,2
+1764056673460,39,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,806,16,16,39,Juan,0
+1764056673475,61,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,806,16,16,61,Juan,0
+1764056672500,1054,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,374,16,16,1054,Juan,1
+1764056673561,34,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,1023,16,16,33,Juan,0
+1764056673561,36,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,1023,16,16,36,Juan,0
+1764056672545,1137,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,503,16,16,1136,Juan,1
+1764056672574,1130,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,503,16,16,1130,Juan,2
+1764056672589,1120,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,374,16,16,1119,Juan,1
+1764056673692,17,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,426,16,16,17,Juan,0
+1764056672661,1152,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,503,16,16,1152,Juan,2
+1764056673809,33,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,1023,16,16,33,Juan,0
+1764056673851,44,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,1023,16,16,44,Juan,0
+1764056672747,1194,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,385,16,16,1194,Juan,1
+1764056672802,1167,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,385,16,16,1167,Juan,2
+1764056674018,10,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,806,16,16,10,Juan,0
+1764056672931,1130,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,503,16,16,1130,Juan,2
+1764056674246,9,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,426,17,17,9,Juan,0
+1764056674272,9,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,426,17,17,8,Juan,0
+1764056673323,973,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,503,17,17,973,Juan,1
+1764056673430,906,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,806,17,17,905,Juan,2
+1764056674332,12,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,1023,17,17,11,Juan,0
+1764056673433,922,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,806,17,17,922,Juan,5
+1764056674560,14,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,806,17,17,14,Juan,0
+1764056674588,20,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,806,17,17,20,Juan,0
+1764056674649,54,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,1023,17,17,54,Juan,0
+1764056674666,66,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,1023,17,17,66,Juan,0
+1764056674878,22,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,1023,17,17,22,Juan,0
+1764056673867,1042,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,385,17,17,1042,Juan,2
+1764056674924,20,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,1023,17,17,20,Juan,0
+1764056673908,1068,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,503,17,17,1068,Juan,2
+1764056673908,1074,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,503,17,17,1074,Juan,2
+1764056673991,1112,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,374,17,17,1112,Juan,1
+1764056674018,1130,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,385,19,19,1130,Juan,2
+1764056674007,1147,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,374,19,19,1147,Juan,2
+1764056675214,30,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,426,19,19,30,Juan,0
+1764056674119,1306,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,374,19,19,1306,Juan,2
+1764056674148,1325,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,503,19,19,1325,Juan,1
+1764056675459,18,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,426,19,19,18,Juan,0
+1764056674205,1340,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,503,19,19,1340,Juan,2
+1764056675550,13,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,806,19,19,13,Juan,0
+1764056674376,1366,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,374,19,19,1366,Juan,1
+1764056674433,1333,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,806,19,19,1333,Juan,2
+1764056675779,8,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,806,19,19,8,Juan,0
+1764056675872,9,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,1023,19,19,9,Juan,0
+1764056674604,1310,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,374,19,19,1310,Juan,2
+1764056674649,1294,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,503,19,19,1293,Juan,1
+1764056676071,14,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,1023,19,19,14,Juan,0
+1764056676102,40,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,1023,21,21,40,Juan,0
+1764056675015,1384,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,503,21,21,1384,Juan,2
+1764056675047,1403,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,503,21,21,1403,Juan,2
+1764056675214,1514,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,503,21,21,1514,Juan,2
+1764056675246,1513,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,503,21,21,1512,Juan,2
+1764056675291,1496,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,374,21,21,1496,Juan,2
+1764056675291,1496,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,374,21,21,1496,Juan,2
+1764056675413,1552,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,385,21,21,1552,Juan,1
+1764056675431,1559,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,806,21,21,1559,Juan,2
+1764056675440,1556,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,806,21,21,1556,Juan,2
+1764056675459,1558,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,385,21,21,1558,Juan,3
+1764056677268,11,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,426,22,22,11,Juan,0
+1764056677299,18,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,1023,22,22,17,Juan,0
+1764056677299,19,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,1023,22,22,17,Juan,0
+1764056677329,12,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,426,22,22,12,Juan,0
+1764056675733,1608,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,385,22,22,1608,Juan,3
+1764056675779,1615,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,374,22,22,1615,Juan,1
+1764056675857,1605,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,374,22,22,1605,Juan,2
+1764056677590,17,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,806,22,22,17,Juan,0
+1764056677650,34,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,806,22,22,34,Juan,0
+1764056677650,35,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,426,22,22,35,Juan,0
+1764056676057,1642,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,385,22,22,1642,Juan,1
+1764056676225,1537,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,385,22,22,1537,Juan,2
+1764056676194,1574,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,503,22,22,1573,Juan,1
+1764056676255,1527,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,374,22,22,1526,Juan,2
+1764056677911,34,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,1023,22,22,34,Juan,0
+1764056676394,1593,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,503,22,22,1593,Juan,3
+1764056677988,9,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,806,22,22,9,Juan,0
+1764056677988,24,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,1023,22,22,23,Juan,0
+1764056678003,14,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,426,22,22,14,Juan,0
+1764056676443,1578,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,806,22,22,1578,Juan,1
+1764056676455,1592,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,503,22,22,1591,Juan,2
+1764056676459,1594,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,806,22,22,1594,Juan,1
+1764056678064,12,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,426,22,22,12,Juan,0
+1764056678325,23,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,806,24,24,23,Juan,0
+1764056678310,51,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,1023,24,24,50,Juan,0
+1764056676716,1651,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,374,24,24,1651,Juan,1
+1764056678327,54,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,1023,24,24,54,Juan,0
+1764056678386,27,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,806,24,24,27,Juan,0
+1764056678357,58,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,1023,24,24,58,Juan,0
+1764056676761,1727,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,374,24,24,1727,Juan,2
+1764056678662,17,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,1023,24,24,17,Juan,0
+1764056677038,1661,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,374,24,24,1661,Juan,3
+1764056678723,27,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,1023,24,24,27,Juan,0
+1764056677069,1693,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,374,24,24,1693,Juan,3
+1764056677100,1690,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,385,24,24,1690,Juan,3
+1764056677100,1692,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,385,24,24,1692,Juan,3
+1764056679105,12,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,426,24,24,12,Juan,0
+1764056679105,15,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,426,24,24,15,Juan,0
+1764056677453,1828,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-22,true,806,26,26,1828,Juan,2
+1764056679429,20,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,806,26,26,20,Juan,0
+1764056679429,21,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,806,26,26,21,Juan,0
+1764056679583,27,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-22,true,1023,26,26,27,Juan,0
+1764056677622,2003,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,503,26,26,2003,Juan,1
+1764056677696,1962,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,385,26,26,1962,Juan,2
+1764056679752,34,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,1023,26,26,34,Juan,0
+1764056679752,35,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,1023,26,26,35,Juan,0
+1764056678095,1794,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,385,26,26,1794,Juan,2
+1764056678079,1817,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,374,26,26,1817,Juan,2
+1764056679967,15,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,426,26,26,15,Juan,0
+1764056678249,1776,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,503,26,26,1776,Juan,1
+1764056678294,1762,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,374,26,26,1762,Juan,3
+1764056678326,1756,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,503,26,26,1756,Juan,2
+1764056678356,1757,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,374,26,26,1756,Juan,2
+1764056678464,1706,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-23,true,806,26,26,1706,Juan,2
+1764056678464,1709,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,806,26,26,1709,Juan,2
+1764056680196,11,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,426,27,27,11,Juan,0
+1764056680288,9,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,806,27,27,9,Juan,0
+1764056678677,1729,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,385,27,27,1728,Juan,1
+1764056678677,1751,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,503,27,27,1751,Juan,1
+1764056678692,1747,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,503,27,27,1747,Juan,2
+1764056680471,36,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-23,true,1023,27,27,36,Juan,0
+1764056680487,39,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,1023,27,27,39,Juan,0
+1764056677622,2910,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,503,27,27,2910,Juan,1
+1764056680521,14,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,806,27,27,14,Juan,0
+1764056678723,1833,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,503,27,27,1833,Juan,2
+1764056677773,2850,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,385,27,27,2850,Juan,1
+1764056680609,33,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,1023,27,27,32,Juan,0
+1764056678798,1859,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,385,27,27,1859,Juan,2
+1764056680715,15,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,426,27,27,15,Juan,0
+1764056680838,12,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,1023,27,27,12,Juan,0
+1764056679013,1856,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,385,27,27,1856,Juan,2
+1764056679059,1848,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,503,27,27,1848,Juan,2
+1764056680929,12,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,426,27,27,12,Juan,0
+1764056680959,21,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,426,27,27,21,Juan,0
+1764056681035,17,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,806,27,27,17,Juan,0
+1764056681175,15,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,426,29,29,15,Juan,0
+1764056679477,1740,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,806,29,29,1740,Juan,2
+1764056679477,1751,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-26,true,806,29,29,1751,Juan,2
+1764056681248,11,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,806,29,29,11,Juan,0
+1764056681294,14,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,806,29,29,14,Juan,0
+1764056681356,23,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,1023,29,29,23,Juan,0
+1764056681494,27,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,806,29,29,27,Juan,0
+1764056681525,55,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,1023,29,29,54,Juan,0
+1764056681540,58,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-26,true,1023,29,29,58,Juan,0
+1764056681569,54,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,1023,29,29,54,Juan,0
+1764056681615,49,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,1023,29,29,48,Juan,0
+1764056679921,1787,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-22,true,503,29,29,1786,Juan,2
+1764056679936,1778,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,374,29,29,1777,Juan,2
+1764056680088,1730,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,503,29,29,1729,Juan,2
+1764056680092,1738,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,503,29,29,1737,Juan,3
+1764056679074,2771,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,385,29,29,2771,Juan,3
+1764056681831,24,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,1023,29,29,24,Juan,0
+1764056680211,1699,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,385,29,29,1699,Juan,2
+1764056680333,1703,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,374,29,29,1703,Juan,3
+1764056680364,1687,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,385,29,29,1686,Juan,3
+1764056680395,1693,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,374,29,29,1692,Juan,4
+1764056680425,1707,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,385,29,29,1707,Juan,2
+1764056682152,11,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,426,29,29,11,Juan,0
+1764056680490,1688,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-27,true,806,29,29,1688,Juan,2
+1764056682213,10,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,426,31,31,10,Juan,0
+1764056680745,1556,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,374,31,31,1555,Juan,2
+1764056680745,1563,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,374,31,31,1563,Juan,2
+1764056680821,1553,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-23,true,503,31,31,1553,Juan,2
+1764056682366,11,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,426,31,31,11,Juan,0
+1764056680837,1549,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,374,31,31,1549,Juan,2
+1764056680837,1551,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,503,31,31,1551,Juan,2
+1764056682442,25,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,426,31,31,25,Juan,0
+1764056680867,1611,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,374,31,31,1611,Juan,4
+1764056682473,45,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,806,31,31,45,Juan,0
+1764056682488,84,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-27,true,1023,31,31,83,Juan,0
+1764056682534,43,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,806,31,31,43,Juan,0
+1764056682688,28,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,806,31,31,28,Juan,0
+1764056680943,1814,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,503,31,31,1811,Juan,3
+1764056682780,8,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,806,31,31,8,Juan,0
+1764056682826,22,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,1023,31,31,21,Juan,0
+1764056682887,29,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,1023,31,31,28,Juan,0
+1764056683024,20,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,1023,31,31,17,Juan,0
+1764056681497,1590,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,806,31,31,1590,Juan,2
+1764056681497,1594,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-28,true,806,31,31,1594,Juan,2
+1764056683099,26,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,1023,31,31,26,Juan,0
+1764056683389,26,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,1023,32,32,26,Juan,0
+1764056683404,21,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-28,true,1023,32,32,19,Juan,0
+1764056681895,1579,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,503,32,32,1579,Juan,2
+1764056681907,1574,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-26,true,503,32,32,1573,Juan,2
+1764056681939,1563,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,503,32,32,1562,Juan,1
+1764056681970,1545,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,503,32,32,1545,Juan,3
+1764056682015,1534,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,385,32,32,1534,Juan,2
+1764056682015,1540,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-22,true,374,32,32,1540,Juan,2
+1764056682122,1656,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,374,32,32,1656,Juan,5
+1764056683862,11,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,426,32,32,11,Juan,0
+1764056682350,1626,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,385,32,32,1626,Juan,2
+1764056682396,1599,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,385,32,32,1599,Juan,2
+1764056682507,1550,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-30,true,806,32,32,1550,Juan,4
+1764056681218,2854,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,374,32,32,2854,Juan,3
+1764056682780,1351,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,385,32,32,1351,Juan,1
+1764056684182,9,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,806,32,32,9,Juan,0
+1764056682888,1365,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-27,true,503,34,34,1364,Juan,4
+1764056684289,20,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,426,34,34,20,Juan,0
+1764056684303,13,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,426,34,34,13,Juan,0
+1764056684365,28,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-30,true,1023,34,34,28,Juan,0
+1764056683068,1384,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,374,34,34,1384,Juan,5
+1764056684442,31,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,426,34,34,31,Juan,0
+1764056684503,27,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,1023,34,34,27,Juan,0
+1764056684611,14,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,806,34,34,14,Juan,0
+1764056684625,19,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,806,34,34,19,Juan,0
+1764056683161,1503,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,503,34,34,1499,Juan,5
+1764056682167,2525,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,503,34,34,2525,Juan,5
+1764056683221,1502,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,503,34,34,1502,Juan,3
+1764056684777,12,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,806,34,34,12,Juan,0
+1764056684931,21,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,1023,34,34,20,Juan,0
+1764056684946,10,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,1023,34,34,10,Juan,0
+1764056682137,2892,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,374,34,34,2892,Juan,5
+1764056682611,2445,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,385,34,34,2445,Juan,2
+1764056685098,12,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,1023,34,34,12,Juan,0
+1764056683725,1390,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,503,34,34,1390,Juan,2
+1764056683787,1356,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-26,true,374,34,34,1356,Juan,1
+1764056683788,1359,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,374,34,34,1358,Juan,2
+1764056683817,1351,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,374,34,34,1350,Juan,2
+1764056683817,1364,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,374,34,34,1364,Juan,5
+1764056683862,1368,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-22,true,385,36,36,1368,Juan,6
+1764056685359,20,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,426,36,36,20,Juan,0
+1764056682703,2726,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,374,36,36,2726,Juan,6
+1764056684090,1461,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,385,36,36,1461,Juan,2
+1764056685543,12,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-22,true,426,36,36,12,Juan,0
+1764056685681,11,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,806,36,36,11,Juan,0
+1764056682687,3028,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,385,36,36,3028,Juan,5
+1764056685863,26,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-22,true,806,36,36,26,Juan,0
+1764056685863,27,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,426,36,36,27,Juan,0
+1764056686001,25,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,1023,36,36,25,Juan,0
+1764056686017,13,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,426,36,36,13,Juan,0
+1764056684380,1656,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,385,36,36,1656,Juan,6
+1764056683512,2637,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-32,true,806,36,36,2637,Juan,2
+1764056684565,1603,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-27,true,374,36,36,1602,Juan,5
+1764056686200,15,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,806,36,36,15,Juan,0
+1764056686200,28,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-22,true,1023,36,36,28,Juan,0
+1764056686338,12,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,426,38,38,12,Juan,0
+1764056686338,12,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,806,38,38,12,Juan,0
+1764056684761,1599,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,385,38,38,1599,Juan,2
+1764056686458,72,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-32,true,1023,38,38,72,Juan,0
+1764056686519,93,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,1023,38,38,81,Juan,0
+1764056686656,30,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,806,38,38,30,Juan,0
+1764056686672,19,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,426,38,38,19,Juan,0
+1764056686656,41,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,1023,38,38,41,Juan,0
+1764056684976,1811,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,374,38,38,1811,Juan,2
+1764056685006,1812,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,374,38,38,1812,Juan,3
+1764056683726,3121,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-28,true,503,38,38,3120,Juan,1
+1764056681693,5166,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,503,38,38,5166,Juan,4
+1764056687009,24,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,806,38,38,24,Juan,0
+1764056686991,70,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,1023,38,38,69,Juan,0
+1764056687335,26,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,1023,39,39,26,Juan,0
+1764056685266,2185,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,503,39,39,2185,Juan,2
+1764056685266,2193,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,503,39,39,2193,Juan,5
+1764056685482,2361,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,385,39,39,2361,Juan,2
+1764056685482,2367,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,385,39,39,2367,Juan,5
+1764056685530,2367,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-36,true,806,39,39,2367,Juan,2
+1764056685531,2375,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-35,true,806,39,39,2375,Juan,1
+1764056684519,3430,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-33,true,806,39,39,3430,Juan,2
+1764056682521,5461,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-31,true,806,39,39,5461,Juan,2
+1764056688159,21,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,426,39,39,21,Juan,0
+1764056688159,21,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,426,39,39,21,Juan,0
+1764056688205,28,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-36,true,1023,39,39,28,Juan,0
+1764056688219,22,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-35,true,1023,39,39,22,Juan,0
+1764056685037,3212,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,374,39,39,3212,Juan,3
+1764056688250,29,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-33,true,1023,41,41,29,Juan,0
+1764056688295,29,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-31,true,1023,41,41,29,Juan,0
+1764056682611,5789,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,385,41,41,5789,Juan,2
+1764056678983,9522,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,503,41,41,9520,Juan,4
+1764056688494,18,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,806,41,41,18,Juan,0
+1764056688494,19,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,806,41,41,19,Juan,0
+1764056685453,3152,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,385,41,41,3152,Juan,7
+1764056684839,3814,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,503,41,41,3814,Juan,5
+1764056688705,10,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,426,41,41,10,Juan,0
+1764056688827,27,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,1023,41,41,27,Juan,0
+1764056688827,28,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,1023,41,41,27,Juan,0
+1764056686840,2061,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-32,true,503,41,41,2061,Juan,5
+1764056688919,20,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,426,41,41,20,Juan,0
+1764056685422,3569,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,374,41,41,3569,Juan,5
+1764056689028,21,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,806,41,41,21,Juan,0
+1764056689254,13,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,806,41,41,13,Juan,0
+1764056687364,1917,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,503,43,43,1917,Juan,3
+1764056689362,22,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,1023,43,43,21,Juan,0
+1764056684519,4880,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-34,true,806,43,43,4880,Juan,2
+1764056687774,1646,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,374,43,43,1646,Juan,3
+1764056686916,2577,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,503,43,43,2577,Juan,7
+1764056686535,3019,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-38,true,806,43,43,3019,Juan,3
+1764056689576,29,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,1023,43,43,29,Juan,0
+1764056686536,3110,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-37,true,806,43,43,3110,Juan,2
+1764056689713,13,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-34,true,1023,43,43,13,Juan,0
+1764056687007,2776,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,503,43,43,2775,Juan,6
+1764056685421,4459,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,503,43,43,4459,Juan,2
+1764056687122,2762,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,385,43,43,2762,Juan,2
+1764056689869,22,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-38,true,1023,43,43,21,Juan,0
+1764056689961,15,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-37,true,1023,43,43,15,Juan,0
+1764056687162,2823,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,374,43,43,2822,Juan,2
+1764056687148,2855,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-28,true,374,43,43,2854,Juan,4
+1764056687092,3009,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,385,43,43,3009,Juan,4
+1764056690189,15,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,426,43,43,14,Juan,0
+1764056688585,1703,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-33,true,503,44,44,1703,Juan,2
+1764056690406,22,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,426,44,44,22,Juan,0
+1764056688812,1680,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,374,44,44,1680,Juan,2
+1764056685451,5063,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-26,true,385,44,44,5063,Juan,6
+1764056690511,11,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,806,44,44,11,Juan,0
+1764056687554,2978,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-39,true,806,44,44,2978,Juan,3
+1764056688967,1750,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,374,44,44,1744,Juan,2
+1764056690742,13,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,806,44,44,13,Juan,0
+1764056689163,1660,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,503,44,44,1660,Juan,6
+1764056689163,1666,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,503,44,44,1666,Juan,7
+1764056690820,14,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-26,true,426,44,44,14,Juan,0
+1764056690836,11,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-39,true,1023,44,44,11,Juan,0
+1764056690835,13,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,1023,44,44,13,Juan,0
+1764056687759,3104,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,374,44,44,3104,Juan,5
+1764056689300,1655,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,385,44,44,1655,Juan,6
+1764056691065,26,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,1023,44,44,26,Juan,0
+1764056691142,13,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-26,true,806,44,44,13,Juan,0
+1764056691263,13,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,426,44,44,13,Juan,0
+1764056689728,1761,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,385,46,46,1761,Juan,7
+1764056691462,36,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-26,true,1023,46,46,33,Juan,0
+1764056691590,34,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,806,46,46,34,Juan,0
+1764056685741,6063,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,385,46,46,6063,Juan,2
+1764056691798,17,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,426,46,46,17,Juan,0
+1764056689915,1924,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,503,46,46,1924,Juan,4
+1764056688541,3377,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-36,true,503,46,46,3375,Juan,2
+1764056686474,5488,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-27,true,385,46,46,5488,Juan,4
+1764056691933,46,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,1023,46,46,46,Juan,0
+1764056690098,1959,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,374,46,46,1959,Juan,3
+1764056682687,9389,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-23,true,374,46,46,9388,Juan,3
+1764056692109,29,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,426,46,46,29,Juan,0
+1764056692125,20,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,806,46,46,20,Juan,0
+1764056692271,16,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-27,true,426,46,46,16,Juan,0
+1764056690189,2127,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,374,48,48,2127,Juan,2
+1764056690312,2103,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-28,true,385,48,48,2103,Juan,3
+1764056692451,13,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,806,48,48,13,Juan,0
+1764056692451,27,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-3,true,1023,48,48,27,Juan,0
+1764056692606,15,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-27,true,806,48,48,15,Juan,0
+1764056686338,6336,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,503,48,48,6336,Juan,7
+1764056690590,2110,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-44,true,806,48,48,2110,Juan,2
+1764056692723,23,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-28,true,426,48,48,23,Juan,0
+1764056692769,14,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,1023,48,48,14,Juan,0
+1764056690804,2077,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,385,48,48,2077,Juan,2
+1764056689577,3328,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-43,true,806,48,48,3328,Juan,4
+1764056692938,23,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-27,true,1023,48,48,23,Juan,0
+1764056689806,3176,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,374,48,48,3176,Juan,3
+1764056693014,27,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-44,true,1023,48,48,27,Juan,0
+1764056693060,11,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-28,true,806,48,48,11,Juan,0
+1764056693197,14,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,426,48,48,14,Juan,0
+1764056693212,28,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-43,true,1023,48,48,23,Juan,0
+1764056691126,2116,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-16,true,374,48,48,2116,Juan,11
+1764056691172,2084,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,385,48,48,2084,Juan,5
+1764056691157,2108,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-6,true,503,48,48,2103,Juan,7
+1764056689698,3585,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,503,48,48,3585,Juan,6
+1764056693380,29,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-28,true,1023,49,49,29,Juan,0
+1764056690282,3137,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-37,true,503,49,49,3135,Juan,3
+1764056690297,3234,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,385,49,49,3234,Juan,4
+1764056693520,20,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,806,49,49,20,Juan,0
+1764056693565,23,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,426,49,49,23,Juan,0
+1764056691813,1859,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-26,true,503,49,49,1859,Juan,1
+1764056693840,13,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,426,49,49,13,Juan,0
+1764056693856,21,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,1023,49,49,21,Juan,0
+1764056691019,2882,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,385,49,49,2882,Juan,4
+1764056693902,7,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,806,49,49,7,Juan,0
+1764056689577,4412,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-42,true,806,49,49,4412,Juan,6
+1764056692284,1714,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,503,49,49,1714,Juan,3
+1764056694163,13,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,806,49,49,13,Juan,0
+1764056685343,8852,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,385,49,49,8852,Juan,3
+1764056694208,14,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,426,49,49,14,Juan,0
+1764056694224,27,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,1023,49,49,27,Juan,0
+1764056694301,27,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-42,true,1023,50,50,27,Juan,0
+1764056691401,3061,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,503,50,50,3061,Juan,3
+1764056694482,25,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,1023,50,50,25,Juan,0
+1764056694497,12,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,426,50,50,12,Juan,0
+1764056694528,14,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,806,50,50,14,Juan,0
+1764056691607,3012,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-45,true,806,50,50,3012,Juan,2
+1764056688556,6196,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,385,50,50,6196,Juan,2
+1764056694819,20,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,806,50,50,20,Juan,0
+1764056694849,23,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,1023,50,50,23,Juan,0
+1764056693090,1842,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,503,50,50,1837,Juan,4
+1764056694942,25,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-45,true,1023,50,50,24,Juan,0
+1764056695064,8,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,426,50,50,8,Juan,0
+1764056695155,25,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,1023,50,50,22,Juan,0
+1764056692226,3104,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-36,true,374,50,50,3104,Juan,2
+1764056695382,15,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,806,50,50,15,Juan,0
+1764056690206,5201,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-38,true,503,50,50,5195,Juan,3
+1764056693596,1838,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,374,50,50,1836,Juan,5
+1764056692618,2943,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-48,true,806,50,50,2943,Juan,6
+1764056695703,41,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,1023,50,50,26,Juan,0
+1764056695868,17,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-48,true,1023,50,50,17,Juan,0
+1764056692618,3293,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-47,true,806,50,50,3293,Juan,3
+1764056692140,3936,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,374,50,50,3934,Juan,4
+1764056692984,3106,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,374,50,50,3106,Juan,10
+1764056694193,2038,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,503,50,50,2038,Juan,3
+1764056696220,44,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-47,true,1023,50,50,44,Juan,0
+1764056692633,3831,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,385,50,50,3831,Juan,4
+1764056693289,3263,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,385,50,50,3263,Juan,3
+1764056696768,19,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,426,50,50,19,Juan,0
+1764056694640,2192,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-50,true,806,50,50,2192,Juan,6
+1764056694635,2206,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-42,true,503,50,50,2205,Juan,6
+1764056691607,5256,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-46,true,806,50,50,5256,Juan,2
+1764056696856,22,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,426,50,50,22,Juan,0
+1764056694819,2215,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,503,50,50,2214,Juan,4
+1764056697095,27,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,806,50,50,27,Juan,0
+1764056697138,25,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-50,true,1023,50,50,22,Juan,0
+1764056697167,33,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-46,true,1023,50,50,33,Juan,0
+1764056697182,21,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,806,50,50,21,Juan,0
+1764056693980,3320,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-26,true,374,50,50,3319,Juan,2
+1764056687676,9716,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,503,50,50,9715,Juan,2
+1764056697438,58,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,1023,50,50,58,Juan,0
+1764056695185,2338,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,503,50,50,2338,Juan,2
+1764056697511,27,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,1023,50,50,26,Juan,0
+1764056695247,2374,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,374,50,50,2374,Juan,7
+1764056694301,3666,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,374,50,50,3666,Juan,6
+1764056688572,9548,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-40,true,806,50,50,9548,Juan,2
+1764056688556,9587,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-35,true,503,50,50,9587,Juan,2
+1764056696052,2224,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,503,50,50,2224,Juan,2
+1764056698426,23,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-40,true,1023,50,50,23,Juan,0
+1764056693550,4963,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-43,true,503,50,50,4963,Juan,8
+1764056696407,2207,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,385,50,50,2207,Juan,4
+1764056698918,15,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,426,50,50,15,Juan,0
+1764056697153,1993,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-42,true,374,50,50,1993,Juan,11
+1764056699241,14,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,806,50,50,14,Juan,0
+1764056697467,2009,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-50,true,503,50,50,2007,Juan,5
+1764056699562,21,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-4,true,1023,50,50,21,Juan,0
+1764056695750,3837,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,385,50,50,3837,Juan,6
+1764056696389,3201,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,385,50,50,3201,Juan,3
+1764056697831,1893,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,374,50,50,1892,Juan,4
+1764056697925,1836,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,385,50,50,1836,Juan,9
+1764056699898,23,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,426,50,50,23,Juan,0
+1764056699898,25,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,426,50,50,25,Juan,0
+1764056689209,10847,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-32,true,374,50,50,10844,Juan,6
+1764056693274,6803,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-27,true,503,50,50,6803,Juan,5
+1764056700067,19,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,426,50,50,19,Juan,0
+1764056700235,7,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,806,50,50,7,Juan,0
+1764056700235,7,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,806,50,50,7,Juan,0
+1764056698277,1987,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,385,50,50,1987,Juan,11
+1764056700388,8,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,806,50,50,8,Juan,0
+1764056689592,10825,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,374,50,50,10825,Juan,6
+1764056698456,1972,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-35,true,374,50,50,1972,Juan,11
+1764056700572,21,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,426,50,50,21,Juan,0
+1764056700556,43,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-20,true,1023,50,50,43,Juan,0
+1764056700556,46,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-25,true,1023,50,50,46,Juan,0
+1764056700709,45,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,1023,50,50,35,Juan,0
+1764056698764,2002,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-40,true,503,50,50,2002,Juan,4
+1764056700895,19,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,806,50,50,19,Juan,0
+1764056697695,3347,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,374,50,50,3347,Juan,3
+1764056696540,4620,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,374,50,50,4620,Juan,10
+1764056701216,28,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-29,true,1023,50,50,28,Juan,0
+1764056692390,9516,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-23,true,385,50,50,9516,Juan,3
+1764056692360,9629,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,385,50,50,9629,Juan,7
+1764056698580,3446,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-11,true,374,50,50,3446,Juan,8
+1764056702210,17,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-23,true,426,50,50,17,Juan,0
+1764056700373,1908,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-32,true,385,50,50,1908,Juan,3
+1764056702302,12,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,426,50,50,12,Juan,0
+1764056700389,1970,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-27,true,374,50,50,1970,Juan,2
+1764056699455,2975,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-42,true,385,50,50,2975,Juan,4
+1764056702528,15,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-23,true,806,50,50,15,Juan,0
+1764056700724,1824,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,385,50,50,1824,Juan,2
+1764056702591,30,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-32,true,426,50,50,30,Juan,0
+1764056702622,24,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,806,50,50,24,Juan,0
+1764056702743,21,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-42,true,426,50,50,21,Juan,0
+1764056702851,15,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,426,50,50,15,Juan,0
+1764056702851,37,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-23,true,1023,50,50,30,Juan,0
+1764056702930,10,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-32,true,806,50,50,10,Juan,0
+1764056694774,8170,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,374,50,50,8170,Juan,9
+1764056702961,16,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,1023,50,50,15,Juan,0
+1764056701064,1941,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,503,50,50,1941,Juan,5
+1764056701079,1943,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-40,true,374,50,50,1943,Juan,5
+1764056700035,2988,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,385,50,50,2988,Juan,8
+1764056703067,11,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-42,true,806,50,50,11,Juan,0
+1764056703174,15,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,806,50,50,15,Juan,0
+1764056703328,29,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,426,50,50,29,Juan,0
+1764056703251,147,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-32,true,1023,50,50,71,Juan,0
+1764056703390,43,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-42,true,1023,50,50,42,Juan,0
+1764056703497,58,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,1023,50,50,47,Juan,0
+1764056701476,2088,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,385,50,50,2088,Juan,3
+1764056703663,19,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,806,50,50,19,Juan,0
+1764056703877,20,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,426,50,50,20,Juan,0
+1764056703985,27,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,1023,50,50,27,Juan,0
+1764056704211,8,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,806,50,50,8,Juan,0
+1764056704528,22,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-12,true,1023,50,50,22,Juan,0
+1764056695490,9673,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,503,50,50,9673,Juan,6
+1764056684700,20523,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-30,true,503,50,50,20523,Juan,4
+1764056695277,10236,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-45,true,503,50,50,10236,Juan,7
+1764056703282,2853,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-19,true,503,50,50,2853,Juan,5
+1764056703190,3991,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-23,true,503,50,50,3991,Juan,2
+1764056701353,6054,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,385,50,50,6054,Juan,3
+1764056697347,10142,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,374,50,50,10142,Juan,4
+1764056707722,28,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,426,50,50,28,Juan,0
+1764056697847,10003,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,503,50,50,10000,Juan,8
+1764056708057,24,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,806,50,50,24,Juan,0
+1764056705525,2666,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-30,true,374,50,50,2666,Juan,4
+1764056708392,33,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,1023,50,50,31,Juan,0
+1764056703861,4605,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,503,50,50,4605,Juan,10
+1764056697802,10781,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,503,50,50,10781,Juan,4
+1764056703251,5939,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,385,50,50,5939,Juan,5
+1764056709503,31,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,426,50,50,31,Juan,0
+1764056705468,4092,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,374,50,50,4084,Juan,10
+1764056709836,21,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,806,50,50,21,Juan,0
+1764056703313,6858,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,374,50,50,6858,Juan,8
+1764056710167,24,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,1023,50,50,24,Juan,0
+1764056681158,30028,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-2,false,2711,50,50,0,Juan,4
+1764056708500,2962,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-30,true,385,50,50,2962,Juan,6
+1764056708740,2954,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,503,50,50,2954,Juan,11
+1764056705816,5953,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-45,true,374,50,50,5953,Juan,5
+1764056711777,9,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-30,true,426,50,50,9,Juan,0
+1764056693350,18700,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-44,true,503,50,50,18700,Juan,5
+1764056707797,4308,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,385,50,50,4308,Juan,5
+1764056712098,52,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-30,true,806,50,50,52,Juan,0
+1764056691142,21271,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,374,50,50,21271,Juan,5
+1764056712421,13,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,426,50,50,13,Juan,0
+1764056712466,18,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-30,true,1023,50,50,17,Juan,0
+1764056712739,14,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,806,50,50,14,Juan,0
+1764056713060,81,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,1023,50,50,66,Juan,0
+1764056710476,2761,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,385,50,50,2761,Juan,3
+1764056683358,30009,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-17,false,2711,50,50,0,Juan,4
+1764056683435,30008,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-10,false,2711,50,50,0,Juan,2
+1764056713551,20,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,426,50,50,20,Juan,0
+1764056694559,19097,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,503,50,50,19097,Juan,10
+1764056713886,11,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,806,50,50,11,Juan,0
+1764056704317,9596,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,503,50,50,9596,Juan,3
+1764056696193,17995,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-48,true,503,50,50,17995,Juan,7
+1764056714207,23,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,1023,50,50,22,Juan,0
+1764056695718,18607,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-38,true,374,50,50,18606,Juan,9
+1764056712007,2318,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,374,50,50,2318,Juan,3
+1764056712359,2299,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-44,true,374,50,50,2281,Juan,2
+1764056712093,3596,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-45,true,385,50,50,3595,Juan,21
+1764056713443,2336,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,503,50,50,2336,Juan,16
+1764056713749,2242,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,374,50,50,2237,Juan,6
+1764056715999,36,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-45,true,426,50,50,36,Juan,0
+1764056712786,3556,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-30,true,503,50,50,3538,Juan,14
+1764056716347,10,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-45,true,806,50,50,10,Juan,0
+1764056712723,3712,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,385,50,50,3712,Juan,3
+1764056714222,2292,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,374,50,50,2291,Juan,5
+1764056686534,30013,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-22,false,2711,50,50,0,Juan,4
+1764056716669,80,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-45,true,1023,50,50,44,Juan,0
+1764056716744,26,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,426,50,50,26,Juan,0
+1764056711520,5567,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,374,50,50,5567,Juan,10
+1764056717079,9,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,806,50,50,9,Juan,0
+1764056717400,33,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,1023,50,50,33,Juan,0
+1764056714543,3455,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,503,50,50,3444,Juan,5
+1764056714498,3500,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-48,true,374,50,50,3485,Juan,6
+1764056714636,3564,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,385,50,50,3564,Juan,15
+1764056714635,3571,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-38,true,385,50,50,3571,Juan,10
+1764056718503,26,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,426,50,50,26,Juan,0
+1764056718518,17,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-38,true,426,50,50,17,Juan,0
+1764056688571,30008,login-email,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-41,false,2711,50,50,0,Juan,3
+1764056688629,30012,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-31,false,2711,50,50,0,Juan,5
+1764056718840,18,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,806,50,50,18,Juan,0
+1764056718840,20,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-38,true,806,50,50,20,Juan,0
+1764056719163,71,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,1023,50,50,43,Juan,0
+1764056719163,81,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-38,true,1023,50,50,43,Juan,0
+1764056717064,2428,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-45,true,503,50,50,2428,Juan,6
+1764056713673,5825,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,374,50,50,5825,Juan,22
+1764056690038,30012,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-34,false,2711,50,50,0,Juan,6
+1764056716822,3471,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,385,50,50,3471,Juan,17
+1764056709867,10553,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,385,50,50,10553,Juan,21
+1764056710504,10211,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-5,true,503,50,50,10020,Juan,4
+1764056717736,3012,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-8,true,503,50,50,2784,Juan,8
+1764056720629,129,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,426,50,50,129,Juan,0
+1764056690602,30159,estado-alumno-inscripcion,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-33,false,2711,50,50,0,Juan,3
+1764056720735,80,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,426,50,50,80,Juan,0
+1764056717401,3507,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,385,50,50,3507,Juan,2
+1764056721067,393,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,806,50,50,393,Juan,0
+1764056721045,1298,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-5,false,2383,50,50,0,Juan,1298
+1764056691161,31206,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-39,false,2711,50,50,0,Juan,7
+1764056721264,1208,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,806,50,50,1208,Juan,0
+1764056721268,1213,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,426,50,50,1213,Juan,0
+1764056721071,1526,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-33,false,2383,50,50,0,Juan,1526
+1764056721058,1553,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-8,false,2383,50,50,0,Juan,1553
+1764056722781,990,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,806,50,50,990,Juan,0
+1764056718305,5646,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-48,true,385,50,50,5646,Juan,15
+1764056719807,4165,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,385,50,50,4165,Juan,23
+1764056718949,5151,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-31,true,374,50,50,3873,Juan,1
+1764056692784,31326,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-3,false,2711,50,50,0,Juan,5
+1764056693735,30400,estado-alumno-inscripcion,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-37,false,2711,50,50,0,Juan,8
+1764056722004,2130,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-18,true,1023,50,50,1794,Juan,0
+1764056693612,30522,login-email,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-49,false,2711,50,50,0,Juan,1
+1764056693719,30423,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-28,false,2711,50,50,0,Juan,5
+1764056693549,30608,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-16,false,2711,50,50,0,Juan,6
+1764056722835,1338,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-5,false,2383,50,50,0,Juan,1337
+1764056718887,5286,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-41,true,1023,50,50,4795,Juan,1
+1764056722957,1234,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-8,false,2383,50,50,0,Juan,1234
+1764056723005,1205,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-39,false,2383,50,50,0,Juan,1205
+1764056722953,1276,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-33,false,2383,50,50,0,Juan,1276
+1764056722774,1480,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-14,true,1023,50,50,1042,Juan,0
+1764056718304,5978,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-24,true,374,50,50,5483,Juan,11
+1764056693580,30703,estado-alumno-inscripcion,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-6,false,2711,50,50,0,Juan,3
+1764056724252,44,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-48,true,426,50,50,44,Juan,0
+1764056719546,4787,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-38,true,503,50,50,4272,Juan,24
+1764056724282,100,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,426,50,50,100,Juan,0
+1764056724609,950,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-48,true,806,50,50,950,Juan,0
+1764056724083,2712,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-2,true,1023,50,50,377,Juan,0
+1764056716085,10781,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-15,true,374,50,50,8248,Juan,5
+1764056724450,2417,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-28,false,2383,50,50,0,Juan,2417
+1764056724450,2474,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-37,false,2383,50,50,0,Juan,2474
+1764056724530,2441,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-8,false,2383,50,50,0,Juan,2440
+1764056724600,2374,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-16,false,2383,50,50,0,Juan,2370
+1764056724622,2352,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-24,false,2383,50,50,0,Juan,2352
+1764056724622,2352,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-6,false,2383,50,50,0,Juan,2352
+1764056724615,2359,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-5,false,2383,50,50,0,Juan,2359
+1764056696570,30459,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-47,false,2711,50,50,0,Juan,4
+1764056695641,31390,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-36,false,2711,50,50,0,Juan,3
+1764056725098,1972,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,806,50,50,1972,Juan,0
+1764056724615,2510,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-41,false,2383,50,50,0,Juan,2510
+1764056724487,2717,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-3,false,2383,50,50,0,Juan,2717
+1764056716656,10598,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-30,true,374,50,50,7770,Juan,23
+1764056713962,13328,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-7,true,374,50,50,10463,Juan,5
+1764056719546,7780,ver-inscripciones-alumno,200,OK,flujo-completo-gateway-ThreadStarter 1-9,true,503,50,50,5092,Juan,34
+1764056724546,2897,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-33,false,2383,50,50,0,Juan,2897
+1764056724463,2994,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-49,false,2383,50,50,0,Juan,2994
+1764056724562,2903,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-14,false,2383,50,50,0,Juan,2903
+1764056719807,7679,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-45,true,374,50,50,5757,Juan,26
+1764056726129,4763,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-48,true,1023,50,50,1486,Juan,0
+1764056697511,33414,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-46,false,2711,50,50,0,Juan,3
+1764056697604,33395,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-26,false,2711,50,50,0,Juan,7
+1764056727420,3584,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-16,false,2383,50,50,0,Juan,3584
+1764056727437,3571,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-41,false,2383,50,50,0,Juan,3571
+1764056727405,3606,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-28,false,2383,50,50,0,Juan,3606
+1764056727419,3593,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-5,false,2383,50,50,0,Juan,3593
+1764056727544,3583,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-6,false,2383,50,50,0,Juan,3583
+1764056727544,3584,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-24,false,2383,50,50,0,Juan,3584
+1764056727553,3576,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-36,false,2383,50,50,0,Juan,3576
+1764056725296,6347,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-38,false,2383,50,50,0,Juan,6347
+1764056727579,4176,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-8,false,2383,50,50,0,Juan,4176
+1764056727612,4145,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-3,false,2383,50,50,0,Juan,4145
+1764056727554,6087,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-47,false,2383,50,50,0,Juan,6087
+1764056699898,33848,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-4,false,2711,50,50,0,Juan,3
+1764056699794,33953,estado-alumno-inscripcion,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-50,false,2711,50,50,0,Juan,16
+1764056727529,6218,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-37,false,2383,50,50,0,Juan,6218
+1764056698826,34921,estado-alumno-inscripcion,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-43,false,2711,50,50,0,Juan,9
+1764056728542,5209,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-45,false,2383,50,50,0,Juan,5209
+1764056716850,16901,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-22,true,374,50,50,12871,Juan,10
+1764056708164,25707,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-13,true,374,50,50,21555,Juan,10
+1764056700740,33151,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-35,false,2711,50,50,0,Juan,10
+1764056708891,25058,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-21,true,374,50,50,20944,Juan,5
+1764056728525,5457,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-33,false,2383,50,50,0,Juan,5456
+1764056714971,20810,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-44,true,385,50,50,20810,Juan,45
+1764056700909,35314,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-20,false,2711,50,50,0,Juan,4
+1764056727592,8660,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-30,false,2383,50,50,0,Juan,8660
+1764056700909,35346,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-25,false,2711,50,50,0,Juan,5
+1764056731477,4782,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-24,false,2383,50,50,0,Juan,4782
+1764056728539,7734,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-14,false,2383,50,50,0,Juan,7734
+1764056728535,7765,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-49,false,2383,50,50,0,Juan,7765
+1764056708770,27662,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-1,true,374,50,50,22314,Juan,3
+1764056736092,339,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-44,true,426,50,50,339,Juan,0
+1764056716302,21086,estado-pago,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,385,50,50,21086,Juan,14
+1764056736917,511,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-44,true,806,50,50,511,Juan,0
+1764056731373,6222,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-41,false,2383,50,50,0,Juan,6222
+1764056731375,6252,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-5,false,2383,50,50,0,Juan,6252
+1764056731477,6183,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-6,false,2383,50,50,0,Juan,6183
+1764056702331,35389,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-11,false,2711,50,50,0,Juan,9
+1764056701553,36169,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-29,false,2711,50,50,0,Juan,12
+1764056727395,10334,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-17,true,1023,50,50,5819,Juan,0
+1764056703329,34403,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-40,false,2711,50,50,0,Juan,25
+1764056704858,32897,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-12,false,2711,50,50,0,Juan,11
+1764056731373,6423,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-28,false,2383,50,50,0,Juan,6422
+1764056720356,17444,estado-alumno-inscripcion,200,OK,flujo-completo-gateway-ThreadStarter 1-34,true,374,50,50,12911,Juan,119
+1764056734597,3209,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-35,false,2383,50,50,0,Juan,3209
+1764056702668,35148,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-27,false,2711,50,50,0,Juan,9
+1764056731477,6481,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-36,false,2383,50,50,0,Juan,6481
+1764056703741,34223,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-42,false,2711,50,50,0,Juan,18
+1764056734005,3960,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-47,false,2383,50,50,0,Juan,3960
+1764056734105,3865,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-43,false,2383,50,50,0,Juan,3865
+1764056734105,3865,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-37,false,2383,50,50,0,Juan,3865
+1764056732172,5811,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-3,false,2383,50,50,0,Juan,5811
+1764056703711,34278,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-32,false,2711,50,50,0,Juan,8
+1764056732173,5810,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-8,false,2383,50,50,0,Juan,5810
+1764056737695,385,pagar-matricula,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,426,50,50,385,Juan,0
+1764056738514,3147,login-email,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,806,50,50,3147,Juan,0
+1764056706443,35340,estado-alumno-inscripcion,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-19,false,2711,50,50,0,Juan,3
+1764056707493,34424,estado-alumno-inscripcion,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-23,false,2711,50,50,0,Juan,15
+1764056738092,3831,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-11,false,2383,50,50,0,Juan,3831
+1764056734065,7885,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-4,false,2702,50,50,0,Juan,7885
+1764056736611,5347,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-30,false,2383,50,50,0,Juan,5347
+1764056736611,5347,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-25,false,2383,50,50,0,Juan,5347
+1764056734065,7893,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-22,false,2702,50,50,0,Juan,7893
+1764056731369,10589,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-16,false,2702,50,50,0,Juan,10589
+1764056734064,7898,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-50,false,2702,50,50,0,Juan,7898
+1764056731349,10613,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-46,false,2702,50,50,0,Juan,10613
+1764056734533,7732,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-21,false,2702,50,50,0,Juan,7732
+1764056736612,5662,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-24,false,2383,50,50,0,Juan,5662
+1764056734534,7747,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-33,false,2702,50,50,0,Juan,7747
+1764056736624,6347,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-20,false,2383,50,50,0,Juan,6347
+1764056736630,6341,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-49,false,2383,50,50,0,Juan,6341
+1764056734062,8909,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-45,false,2702,50,50,0,Juan,8908
+1764056731874,11097,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-26,false,2702,50,50,0,Juan,11097
+1764056736628,6343,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-14,false,2383,50,50,0,Juan,6343
+1764056731953,14214,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-38,false,2702,50,50,0,Juan,14214
+1764056741973,6190,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-10,true,1023,50,50,17,Juan,0
+1764056738511,9655,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-41,false,2383,50,50,0,Juan,9655
+1764056738524,9649,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-40,false,2383,50,50,0,Juan,9649
+1764056738524,9649,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-17,false,2383,50,50,0,Juan,9649
+1764056738091,10088,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-29,false,2383,50,50,0,Juan,10088
+1764056738526,9654,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-34,false,2383,50,50,0,Juan,9654
+1764056738529,9651,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-28,false,2383,50,50,0,Juan,9651
+1764056738529,9653,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-35,false,2383,50,50,0,Juan,9653
+1764056737945,10333,ver-asignaturas,200,OK,flujo-completo-gateway-ThreadStarter 1-44,true,1023,50,50,3715,Juan,0
+1764056736779,11517,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-1,false,2702,50,50,0,Juan,11517
+1764056739210,9101,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-27,false,2383,50,50,0,Juan,8916
+1764056739381,9060,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-42,false,2383,50,50,0,Juan,9060
+1764056734589,13854,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-13,false,2702,50,50,0,Juan,13854
+1764056738077,10371,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-6,false,2383,50,50,0,Juan,10371
+1764056739383,9074,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-37,false,2383,50,50,0,Juan,9074
+1764056739383,9074,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-43,false,2383,50,50,0,Juan,9074
+1764056739381,9078,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-47,false,2383,50,50,0,Juan,9078
+1764056739381,9079,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-36,false,2383,50,50,0,Juan,9079
+1764056739244,9389,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-8,false,2383,50,50,0,Juan,9389
+1764056739240,9394,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-32,false,2383,50,50,0,Juan,9394
+1764056739240,9413,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-3,false,2383,50,50,0,Juan,9413
+1764056742270,8567,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-16,false,2383,50,50,0,Juan,8567
+1764056742274,8563,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-46,false,2383,50,50,0,Juan,8563
+1764056742972,8790,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-25,false,2383,50,50,0,Juan,8790
+1764056742972,8931,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-30,false,2383,50,50,0,Juan,8890
+1764056738517,18229,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-5,false,2702,50,50,0,Juan,18229
+1764056749242,8608,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-36,false,2383,50,50,0,Juan,8608
+1764056749242,8610,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-47,false,2383,50,50,0,Juan,8610
+1764056749242,8611,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-42,false,2383,50,50,0,Juan,8610
+1764056749242,8610,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-43,false,2383,50,50,0,Juan,8610
+1764056749243,8610,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-37,false,2383,50,50,0,Juan,8610
+1764056749237,8618,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-8,false,2383,50,50,0,Juan,8618
+1764056738077,19789,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-12,false,2702,50,50,0,Juan,19789
+1764056749236,8637,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-6,false,2383,50,50,0,Juan,8637
+1764056749237,8649,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-32,false,2383,50,50,0,Juan,8649
+1764056749236,8651,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-3,false,2383,50,50,0,Juan,8651
+1764056748635,9393,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-17,false,2383,50,50,0,Juan,9393
+1764056748632,9397,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-1,false,2383,50,50,0,Juan,9396
+1764056742096,17633,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-19,false,2702,50,50,0,Juan,17633
+1764056742268,17471,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-50,false,2702,50,50,0,Juan,17471
+1764056742252,17487,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-4,false,2702,50,50,0,Juan,17487
+1764056742238,17502,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-23,false,2702,50,50,0,Juan,17502
+1764056742240,17503,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-11,false,2702,50,50,0,Juan,17503
+1764056742270,17478,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-22,false,2702,50,50,0,Juan,17477
+1764056742972,17908,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-24,false,2702,50,50,0,Juan,17908
+1764056752138,8757,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-25,false,2383,50,50,0,Juan,8757
+1764056742972,17947,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-21,false,2702,50,50,0,Juan,17947
+1764056743650,17275,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-14,false,2702,50,50,0,Juan,17275
+1764056743590,17336,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-20,false,2702,50,50,0,Juan,17336
+1764056743613,17320,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-45,false,2702,50,50,0,Juan,17320
+1764056744531,16629,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-26,false,2702,50,50,0,Juan,16629
+1764056744533,16636,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-49,false,2702,50,50,0,Juan,16636
+1764056742972,18227,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-33,false,2702,50,50,0,Juan,18227
+1764056724406,39241,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-31,false,2711,50,50,0,Juan,77
+1764056724451,39197,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-18,false,2711,50,50,0,Juan,134
+1764056724532,39271,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-39,false,2711,50,50,0,Juan,739
+1764056749241,16602,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-13,false,2702,50,50,0,Juan,16602
+1764056747052,18802,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-38,false,2702,50,50,0,Juan,18802
+1764056757099,8768,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-5,false,2383,50,50,0,Juan,8768
+1764056758278,7655,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-3,false,2383,50,50,0,Juan,7655
+1764056748625,17308,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-40,false,2702,50,50,0,Juan,17308
+1764056748621,17312,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-41,false,2702,50,50,0,Juan,17312
+1764056758820,7115,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-17,false,2383,50,50,0,Juan,7115
+1764056758170,7766,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-42,false,2383,50,50,0,Juan,7766
+1764056758271,7664,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-8,false,2383,50,50,0,Juan,7664
+1764056758278,7661,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-32,false,2383,50,50,0,Juan,7661
+1764056748823,17122,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-44,false,2702,50,50,0,Juan,17122
+1764056748826,17119,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-27,false,2702,50,50,0,Juan,17119
+1764056748629,17347,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-28,false,2702,50,50,0,Juan,17347
+1764056748629,17347,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-34,false,2702,50,50,0,Juan,17347
+1764056748622,17354,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-10,false,2702,50,50,0,Juan,17354
+1764056748629,17347,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-29,false,2702,50,50,0,Juan,17347
+1764056748629,17348,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-35,false,2702,50,50,0,Juan,17348
+1764056758186,7747,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-6,false,2383,50,50,0,Juan,7747
+1764056758171,7762,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-47,false,2383,50,50,0,Juan,7762
+1764056758170,7808,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-36,false,2383,50,50,0,Juan,7808
+1764056758172,7806,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-43,false,2383,50,50,0,Juan,7806
+1764056758170,7835,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-37,false,2383,50,50,0,Juan,7834
+1764056760169,5845,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-19,false,2383,50,50,0,Juan,5845
+1764056760063,5952,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-11,false,2383,50,50,0,Juan,5952
+1764056760061,5954,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-23,false,2383,50,50,0,Juan,5954
+1764056760062,5955,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-4,false,2383,50,50,0,Juan,5955
+1764056760063,5954,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-22,false,2383,50,50,0,Juan,5954
+1764056760062,5956,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-50,false,2383,50,50,0,Juan,5956
+1764056751149,14870,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-16,false,2702,50,50,0,Juan,14870
+1764056751149,14871,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-46,false,2702,50,50,0,Juan,14871
+1764056752402,17740,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-30,false,2702,50,50,0,Juan,17740
+1764056727596,42557,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-7,false,2711,50,50,0,Juan,3601
+1764056761400,8758,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-21,false,2383,50,50,0,Juan,8758
+1764056761403,8759,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-14,false,2383,50,50,0,Juan,8759
+1764056761402,8767,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-45,false,2383,50,50,0,Juan,8767
+1764056761973,8383,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-33,false,2383,50,50,0,Juan,8383
+1764056761207,9151,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-25,false,2383,50,50,0,Juan,9151
+1764056761197,9162,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-24,false,2383,50,50,0,Juan,9162
+1764056727487,42873,estado-pago,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-15,false,2711,50,50,0,Juan,4965
+1764056727475,42885,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-2,false,2711,50,50,0,Juan,4974
+1764056761955,10419,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-26,false,2383,50,50,0,Juan,10419
+1764056761963,10798,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-49,false,2383,50,50,0,Juan,10798
+1764056728429,44346,estado-alumno-inscripcion,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-9,false,2711,50,50,0,Juan,5723
+1764056763980,8923,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-18,false,2383,50,50,0,Juan,8923
+1764056763980,8924,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-31,false,2383,50,50,0,Juan,8924
+1764056764276,11075,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-39,false,2383,50,50,0,Juan,11075
+1764056758184,17222,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-12,false,2702,50,50,0,Juan,17222
+1764056758821,16585,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-1,false,2702,50,50,0,Juan,16585
+1764056766183,9376,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-5,false,2383,50,50,0,Juan,9376
+1764056766962,9960,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-8,false,2383,50,50,0,Juan,9960
+1764056766960,9962,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-3,false,2383,50,50,0,Juan,9962
+1764056767065,9906,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-43,false,2383,50,50,0,Juan,9906
+1764056766190,10785,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-38,false,2383,50,50,0,Juan,10785
+1764056731285,45695,ver-inscripciones-alumno,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,flujo-completo-gateway-ThreadStarter 1-48,false,2711,50,50,0,Juan,5297
+1764056766874,10147,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-29,false,2383,50,50,0,Juan,10146
+1764056766879,10146,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-35,false,2383,50,50,0,Juan,10146
+1764056766878,10148,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-34,false,2383,50,50,0,Juan,10147
+1764056766992,10131,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-44,false,2383,50,50,0,Juan,10131
+1764056766982,10134,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-32,false,2383,50,50,0,Juan,10134
+1764056766839,10276,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-41,false,2383,50,50,0,Juan,10276
+1764056766838,10295,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-17,false,2383,50,50,0,Juan,10295
+1764056766892,10266,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-23,false,2383,50,50,0,Juan,10266
+1764056766891,10267,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-11,false,2383,50,50,0,Juan,10267
+1764056766891,10268,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-22,false,2383,50,50,0,Juan,10268
+1764056766890,10269,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-50,false,2383,50,50,0,Juan,10269
+1764056766839,10329,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-40,false,2383,50,50,0,Juan,10329
+1764056766879,10290,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-10,false,2383,50,50,0,Juan,10290
+1764056766874,10258,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-28,false,2383,50,50,0,Juan,10258
+1764056766891,10268,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-4,false,2383,50,50,0,Juan,10268
+1764056766992,13088,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-27,false,2383,50,50,0,Juan,13087
+1764056767073,13007,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-37,false,2383,50,50,0,Juan,13007
+1764056767066,13015,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-36,false,2383,50,50,0,Juan,13015
+1764056767066,13015,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-6,false,2383,50,50,0,Juan,13015
+1764056767062,13020,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-47,false,2383,50,50,0,Juan,13020
+1764056766159,13920,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-13,false,2383,50,50,0,Juan,13920
+1764056761403,18707,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-20,false,2702,50,50,0,Juan,18707
+1764056767078,13144,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-19,false,2383,50,50,0,Juan,13144
+1764056766890,13455,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-16,false,2383,50,50,0,Juan,13455
+1764056766892,13454,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-46,false,2383,50,50,0,Juan,13454
+1764056767052,13362,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-42,false,2383,50,50,0,Juan,13362
+1764056770521,10823,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-14,false,2383,50,50,0,Juan,10823
+1764056770529,10820,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-45,false,2383,50,50,0,Juan,10820
+1764056770521,10832,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-21,false,2383,50,50,0,Juan,10831
+1764056770543,10841,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-30,false,2383,50,50,0,Juan,10841
+1764056770850,10662,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-15,false,2383,50,50,0,Juan,10662
+1764056770850,10670,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-33,false,2383,50,50,0,Juan,10669
+1764056770850,10670,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-2,false,2383,50,50,0,Juan,10669
+1764056770795,10727,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-7,false,2383,50,50,0,Juan,10727
+1764056770808,10716,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-25,false,2383,50,50,0,Juan,10716
+1764056770808,10819,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-24,false,2383,50,50,0,Juan,10819
+1764056773466,10757,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-9,false,2383,50,50,0,Juan,10757
+1764056773457,10792,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-49,false,2383,50,50,0,Juan,10791
+1764056773219,11089,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-18,false,2383,50,50,0,Juan,11088
+1764056773218,11092,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-31,false,2383,50,50,0,Juan,11092
+1764056775781,10747,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-39,false,2383,50,50,0,Juan,10747
+1764056775737,10817,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-12,false,2383,50,50,0,Juan,10817
+1764056775935,10664,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-5,false,2383,50,50,0,Juan,10664
+1764056775730,10883,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-1,false,2383,50,50,0,Juan,10883
+1764056777237,9391,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-3,false,2383,50,50,0,Juan,9391
+1764056777237,9391,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-8,false,2383,50,50,0,Juan,9391
+1764056777466,9220,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-48,false,2383,50,50,0,Juan,9220
+1764056777466,9224,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-38,false,2383,50,50,0,Juan,9197
+1764056777501,9324,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-32,false,2383,50,50,0,Juan,9324
+1764056777474,11981,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-40,false,2383,50,50,0,Juan,11980
+1764056777502,11954,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-44,false,2383,50,50,0,Juan,11954
+1764056777338,12118,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-35,false,2383,50,50,0,Juan,12118
+1764056777339,12120,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-34,false,2383,50,50,0,Juan,12118
+1764056777470,11993,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-50,false,2383,50,50,0,Juan,11993
+1764056777470,11993,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-22,false,2383,50,50,0,Juan,11993
+1764056777469,11994,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-11,false,2383,50,50,0,Juan,11994
+1764056777483,11983,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-4,false,2383,50,50,0,Juan,11983
+1764056777475,11992,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-10,false,2383,50,50,0,Juan,11992
+1764056780445,9044,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-36,false,2383,50,50,0,Juan,9044
+1764056780439,9050,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-20,false,2383,50,50,0,Juan,9050
+1764056780444,9045,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-47,false,2383,50,50,0,Juan,9045
+1764056780446,9045,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-37,false,2383,50,50,0,Juan,9045
+1764056780404,9088,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-27,false,2383,50,50,0,Juan,9088
+1764056777475,12017,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-28,false,2383,50,50,0,Juan,12017
+1764056777470,12023,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-17,false,2383,50,50,0,Juan,12022
+1764056777441,12052,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-41,false,2383,50,50,0,Juan,12052
+1764056777483,12003,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-23,false,2383,50,50,0,Juan,12003
+1764056777338,12175,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-29,false,2383,50,50,0,Juan,12175
+1764056780442,9091,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-13,false,2383,50,50,0,Juan,9091
+1764056780617,8918,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-19,false,2383,50,50,0,Juan,8918
+1764056780873,8691,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-42,false,2383,50,50,0,Juan,8691
+1764056780869,8699,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-6,false,2383,50,50,0,Juan,8699
+1764056780669,8904,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-46,false,2383,50,50,0,Juan,8904
+1764056781672,7909,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-21,false,2383,50,50,0,Juan,7909
+1764056772679,16906,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-26,false,2383,50,50,0,Juan,16906
+1764056781669,7918,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-14,false,2383,50,50,0,Juan,7918
+1764056781927,7718,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-2,false,2383,50,50,0,Juan,7718
+1764056781830,7834,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-25,false,2383,50,50,0,Juan,7834
+1764056781713,8012,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-30,false,2383,50,50,0,Juan,8012
+1764056781923,7829,login-email,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-15,false,2383,50,50,0,Juan,7829
+1764056784702,10558,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-9,false,2383,50,50,0,Juan,10558
+1764056784705,10702,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-49,false,2383,50,50,0,Juan,10702
+1764056784631,10798,ver-asignaturas,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-31,false,2383,50,50,0,Juan,10798
+1764056784633,10938,pagar-matricula,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-18,false,2383,50,50,0,Juan,10938
+1764056777500,18949,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-43,false,2702,50,50,0,Juan,18949
+1764056787156,11214,estado-pago,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-48,false,2383,50,50,0,Juan,11214
+1764056787161,11222,ver-inscripciones-alumno,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-38,false,2383,50,50,0,Juan,11222
+1764056781830,17021,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-7,false,2702,50,50,0,Juan,17021
+1764056780669,18183,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-16,false,2702,50,50,0,Juan,18183
+1764056781927,16925,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-33,false,2702,50,50,0,Juan,16925
+1764056781669,17190,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-45,false,2702,50,50,0,Juan,17189
+1764056790312,10707,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-21,false,2383,50,50,0,Juan,10707
+1764056790313,10707,estado-alumno-inscripcion,Non HTTP response code: java.net.BindException,Non HTTP response message: Address already in use: no further information,flujo-completo-gateway-ThreadStarter 1-14,false,2383,50,50,0,Juan,10707
+1764056782812,20833,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-24,false,2702,50,50,0,Juan,20833
+1764056786830,17730,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-39,false,2702,50,50,0,Juan,17730
+1764056787143,17417,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-8,false,2702,50,50,0,Juan,17417
+1764056787281,19107,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-1,false,2702,50,50,0,Juan,19107
+1764056787280,19112,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-5,false,2702,50,50,0,Juan,19112
+1764056789764,16633,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-50,false,2702,50,50,0,Juan,16633
+1764056789775,16624,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-22,false,2702,50,50,0,Juan,16624
+1764056789775,16624,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-11,false,2702,50,50,0,Juan,16624
+1764056789809,16593,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-23,false,2702,50,50,0,Juan,16593
+1764056787233,19222,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-12,false,2702,50,50,0,Juan,19222
+1764056787143,19327,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-3,false,2702,50,50,0,Juan,19326
+1764056789812,16659,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-36,false,2702,50,50,0,Juan,16659
+1764056789811,16660,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-37,false,2702,50,50,0,Juan,16660
+1764056789811,16661,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-47,false,2702,50,50,0,Juan,16661
+1764056787164,19311,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-32,false,2702,50,50,0,Juan,19311
+1764056792812,13675,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-13,false,2702,50,50,0,Juan,13674
+1764056789805,16691,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-27,false,2702,50,50,0,Juan,16691
+1764056789791,16707,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-44,false,2702,50,50,0,Juan,16707
+1764056789808,16690,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-20,false,2702,50,50,0,Juan,16690
+1764056790315,16187,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-26,false,2702,50,50,0,Juan,16187
+1764056790323,16183,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-15,false,2702,50,50,0,Juan,16183
+1764056789806,16763,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-17,false,2702,50,50,0,Juan,16763
+1764056789806,16763,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-41,false,2702,50,50,0,Juan,16763
+1764056789780,16790,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-34,false,2702,50,50,0,Juan,16790
+1764056789780,16790,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-35,false,2702,50,50,0,Juan,16790
+1764056789781,16789,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-10,false,2702,50,50,0,Juan,16789
+1764056789782,16792,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-4,false,2702,50,50,0,Juan,16792
+1764056790316,16186,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-2,false,2702,50,50,0,Juan,16186
+1764056789807,16762,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-28,false,2702,50,50,0,Juan,16761
+1764056790742,17916,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-29,false,2702,50,50,0,Juan,17916
+1764056790758,17905,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-46,false,2702,50,50,0,Juan,17905
+1764056789760,18905,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-40,false,2702,50,50,0,Juan,18905
+1764056793471,15197,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-25,false,2702,50,50,0,Juan,15197
+1764056793472,15196,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-30,false,2702,50,50,0,Juan,15196
+1764056793469,15202,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-42,false,2702,50,50,0,Juan,15202
+1764056793469,15203,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-6,false,2702,50,50,0,Juan,15203
+1764056795566,13115,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-9,false,2702,50,50,0,Juan,13115
+1764056793466,15233,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-19,false,2702,50,50,0,Juan,15233
+1764056795738,13075,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-31,false,2702,50,50,0,Juan,13075
+1764056795744,13080,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-49,false,2702,50,50,0,Juan,13080
+1764056800013,13955,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-16,false,2702,50,50,0,Juan,13955
+1764056798688,15310,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-48,false,2702,50,50,0,Juan,15310
+1764056799863,14140,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-33,false,2702,50,50,0,Juan,14140
+1764056798693,15325,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-38,false,2702,50,50,0,Juan,15325
+1764056796772,17606,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-43,false,2702,50,50,0,Juan,17606
+1764056799764,14617,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-7,false,2702,49,49,0,Juan,14617
+1764056796439,17944,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-18,false,2702,48,48,0,Juan,17944
+1764056799775,14627,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-45,false,2702,47,47,0,Juan,14627
+1764056801538,12866,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-14,false,2702,46,46,0,Juan,12866
+1764056801540,12865,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-21,false,2702,45,45,0,Juan,12865
+1764056805049,15019,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-39,false,2702,44,44,0,Juan,15019
+1764056805049,15021,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-8,false,2702,43,43,0,Juan,15021
+1764056804443,18019,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-24,false,2702,42,42,0,Juan,18019
+1764056807374,16218,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-12,false,2702,41,41,0,Juan,16218
+1764056807372,16224,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-47,false,2702,40,40,0,Juan,16224
+1764056807373,16226,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-37,false,2702,39,39,0,Juan,16226
+1764056807374,16226,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-36,false,2702,38,38,0,Juan,16226
+1764056807372,16229,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-13,false,2702,37,37,0,Juan,16229
+1764056806711,18416,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-22,false,2702,36,36,0,Juan,18416
+1764056806711,18417,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-11,false,2702,35,35,0,Juan,18417
+1764056807822,17349,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-2,false,2702,35,35,0,Juan,17349
+1764056806699,18506,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-5,false,2702,34,34,0,Juan,18506
+1764056806883,18327,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-10,false,2702,33,33,0,Juan,18326
+1764056806711,18502,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-50,false,2702,32,32,0,Juan,18502
+1764056806697,18517,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-1,false,2702,31,31,0,Juan,18517
+1764056806867,18349,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-23,false,2702,30,30,0,Juan,18349
+1764056806884,18333,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-4,false,2702,30,30,0,Juan,18332
+1764056806883,18334,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-34,false,2702,30,30,0,Juan,18334
+1764056806894,18323,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-28,false,2702,30,30,0,Juan,18323
+1764056806883,18336,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-41,false,2702,29,29,0,Juan,18336
+1764056808142,17078,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-17,false,2702,29,29,0,Juan,17078
+1764056808143,17083,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-35,false,2702,27,27,0,Juan,17083
+1764056808969,16262,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-29,false,2702,26,26,0,Juan,16262
+1764056808971,16260,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-40,false,2702,26,26,0,Juan,16260
+1764056808972,16259,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-46,false,2702,25,25,0,Juan,16259
+1764056811464,13815,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-19,false,2702,24,24,0,Juan,13815
+1764056811463,13816,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-6,false,2702,24,24,0,Juan,13816
+1764056811462,13817,pagar-matricula,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-30,false,2702,22,22,0,Juan,13817
+1764056811463,13816,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-42,false,2702,20,19,0,Juan,13816
+1764056807560,17737,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-27,false,2702,15,15,0,Juan,17737
+1764056807559,17738,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-32,false,2702,15,15,0,Juan,17738
+1764056807560,17738,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-26,false,2702,15,15,0,Juan,17738
+1764056807560,17738,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-15,false,2702,15,15,0,Juan,17738
+1764056807560,17740,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-3,false,2702,11,11,0,Juan,17739
+1764056807560,17793,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-20,false,2702,11,11,0,Juan,17793
+1764056807560,17742,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-44,false,2702,10,10,0,Juan,17742
+1764056810676,14737,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-49,false,2702,9,9,0,Juan,14737
+1764056809096,16319,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-9,false,2702,8,8,0,Juan,16319
+1764056814316,14074,ver-asignaturas,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-16,false,2702,6,6,0,Juan,14074
+1764056814408,14051,login-email,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-48,false,2702,5,5,0,Juan,14050
+1764056814409,14051,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-38,false,2702,4,4,0,Juan,14051
+1764056814408,14059,ver-inscripciones-alumno,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-33,false,2702,3,3,0,Juan,14059
+1764056811462,20140,estado-pago,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-25,false,2702,2,2,0,Juan,20140
+1764056811467,20135,estado-alumno-inscripcion,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information",flujo-completo-gateway-ThreadStarter 1-31,false,2702,2,2,0,Juan,20135
