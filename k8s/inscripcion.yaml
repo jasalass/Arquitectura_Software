@@ -1,0 +1,53 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inscripcion
+  namespace: sgal
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: inscripcion
+  template:
+    metadata:
+      labels:
+        app: inscripcion
+    spec:
+      containers:
+        - name: inscripcion
+          image: inscripcion:1.0
+          ports:
+            - containerPort: 5000
+          env:
+            - name: PORT
+              value: "5000"
+            # Prisma usando PgBouncer
+            - name: DATABASE_URL
+              value: "postgresql://appuser:appsecret@pgbouncer:6432/inscripciones?schema=public"
+          # Healthchecks alineados con tu código
+          readinessProbe:
+            httpGet:
+              path: /inscripcion/ready
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /inscripcion/healthz
+              port: 5000
+            initialDelaySeconds: 20
+            periodSeconds: 20
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: inscripcion
+  namespace: sgal
+spec:
+  selector:
+    app: inscripcion
+  ports:
+    - port: 5000
+      targetPort: 5000

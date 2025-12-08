@@ -1,0 +1,78 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pgbouncer-config
+  namespace: sgal
+data:
+  pgbouncer.ini: |
+    [databases]
+    inscripciones = host=postgres port=5432 user=appuser password=appsecret dbname=inscripciones
+
+    [pgbouncer]
+    ; 🔹 Pooling y límites
+    max_client_conn = 2000
+    default_pool_size = 200
+    reserve_pool_size = 50
+    reserve_pool_timeout = 5
+    server_idle_timeout = 30
+    pkt_buf = 8192
+
+    ; 🔹 Dirección/puerto de escucha
+    listen_addr = 0.0.0.0
+    listen_port = 6432
+
+    ; 🔹 Autenticación sencilla para entorno académico
+    auth_type = any
+    auth_file = /etc/pgbouncer/userlist.txt
+    admin_users = appuser
+
+    ; 🔹 Modo de pool
+    pool_mode = transaction
+
+    ; 🔹 ⚠️ Clave para Prisma:
+    ;    Ignora search_path (y extra_float_digits) para que no reviente al conectar
+    ignore_startup_parameters = extra_float_digits,search_path
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pgbouncer
+  namespace: sgal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pgbouncer
+  template:
+    metadata:
+      labels:
+        app: pgbouncer
+    spec:
+      containers:
+        - name: pgbouncer
+          image: edoburu/pgbouncer
+          ports:
+            - containerPort: 6432
+          volumeMounts:
+            - name: config
+              mountPath: /etc/pgbouncer/pgbouncer.ini
+              subPath: pgbouncer.ini
+      volumes:
+        - name: config
+          configMap:
+            name: pgbouncer-config
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pgbouncer
+  namespace: sgal
+spec:
+  selector:
+    app: pgbouncer
+  ports:
+    - port: 6432
+      targetPort: 6432

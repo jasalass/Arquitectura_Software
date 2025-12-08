@@ -1,0 +1,49 @@
+# k8s/pago.yaml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pago
+  namespace: sgal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pago
+  template:
+    metadata:
+      labels:
+        app: pago
+    spec:
+      containers:
+        - name: pago
+          image: pago:1.0
+          ports:
+            - containerPort: 7000
+          env:
+            - name: PORT
+              value: "7000"
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 7000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 7000
+            initialDelaySeconds: 10
+            periodSeconds: 20
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pago
+  namespace: sgal
+spec:
+  selector:
+    app: pago
+  ports:
+    - port: 7000
+      targetPort: 7000
