@@ -1,4 +1,3 @@
-# k8s/postgres.yaml
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -6,9 +5,9 @@ metadata:
   name: postgres-init-sql
   namespace: sgal
 data:
-  001_schema.sql: |
-    -- pega aquí COMPLETO tu 001_schema.sql
-    -- (el que me enviaste, sin cambios)
+  init.sql: |
+    -- SQL inicial (puedes reemplazar por tu script real)
+    -- Este archivo se monta en /docker-entrypoint-initdb.d/init.sql
 
 ---
 apiVersion: v1
@@ -17,10 +16,11 @@ metadata:
   name: postgres-pvc
   namespace: sgal
 spec:
-  accessModes: ["ReadWriteOnce"]
+  accessModes:
+    - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 5Gi
 
 ---
 apiVersion: apps/v1
@@ -41,6 +41,8 @@ spec:
       containers:
         - name: postgres
           image: postgres:16
+          ports:
+            - containerPort: 5432
           env:
             - name: POSTGRES_DB
               value: "inscripciones"
@@ -48,22 +50,27 @@ spec:
               value: "appuser"
             - name: POSTGRES_PASSWORD
               value: "appsecret"
-          ports:
-            - containerPort: 5432
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: postgres-data
-            - mountPath: /docker-entrypoint-initdb.d
-              name: init-sql
+            - name: postgres-data
+              mountPath: /var/lib/postgresql/data
+            - name: init-sql
+              mountPath: /docker-entrypoint-initdb.d
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "512Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+          livenessProbe:
+            tcpSocket:
+              port: 5432
+            initialDelaySeconds: 20
+            periodSeconds: 15
           readinessProbe:
             exec:
               command: ["pg_isready", "-U", "appuser", "-d", "inscripciones"]
             initialDelaySeconds: 10
-            periodSeconds: 5
-          livenessProbe:
-            exec:
-              command: ["pg_isready", "-U", "appuser", "-d", "inscripciones"]
-            initialDelaySeconds: 20
             periodSeconds: 10
       volumes:
         - name: postgres-data

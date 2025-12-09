@@ -34,6 +34,9 @@ data:
     ;    Ignora search_path (y extra_float_digits) para que no reviente al conectar
     ignore_startup_parameters = extra_float_digits,search_path
 
+  userlist.txt: |
+    "appuser" "appsecret"
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -59,6 +62,16 @@ spec:
             - name: config
               mountPath: /etc/pgbouncer/pgbouncer.ini
               subPath: pgbouncer.ini
+            - name: config
+              mountPath: /etc/pgbouncer/userlist.txt
+              subPath: userlist.txt
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "300m"
+              memory: "256Mi"
       volumes:
         - name: config
           configMap:

@@ -2,6 +2,7 @@
 import dotenv from "dotenv";
 import express from "express";
 import prisma from "./db.js";
+import Redis from "ioredis";
 
 // Leer variables de .env
 dotenv.config();
@@ -12,6 +13,26 @@ const app = express();
 // Asignar puerto
 const PORT = process.env.PORT || 5000;
 
+// =====================
+//  Redis client
+// =====================
+
+const CACHE_KEY = "inscripcion:asignaturas:v1";
+const CACHE_TTL_SECONDS = Number(process.env.CACHE_TTL_SECONDS || "60");
+
+const redis = new Redis({
+  host: process.env.REDIS_HOST || "redis",      // nombre del Service en K8s
+  port: Number(process.env.REDIS_PORT) || 6379,
+});
+
+redis.on("connect", () => {
+  console.log("Redis conectado correctamente");
+});
+
+redis.on("error", (err) => {
+  console.error("Error en Redis:", err.message);
+});
+
 // Middleware para json
 app.use(express.json());
 
@@ -20,7 +41,7 @@ console.log("DB URL presente:", !!process.env.DATABASE_URL);
 // -----------------------------------------------------------------------------
 // Healthcheck básico (DB)
 // -----------------------------------------------------------------------------
-app.get("/inscripcion/health", async (_req, res) => {
+app.get("/health", async (_req, res) => {
   try {
     await prisma.$queryRaw`SELECT 1`;
     res.json({ status: "ok", db: "connected" });
@@ -30,8 +51,22 @@ app.get("/inscripcion/health", async (_req, res) => {
   }
 });
 
-app.get("/inscripcion/asignaturas", async (_req, res) => {
+// -----------------------------------------------------------------------------
+// GET /asignaturas
+// (El gateway lo expone como /inscripcion/asignaturas)
+// -----------------------------------------------------------------------------
+app.get("/asignaturas", async (_req, res) => {
   try {
+    // 1) Intentar leer desde Redis
+    if (redis.status === "ready") {
+      const cached = await redis.get(CACHE_KEY);
+      if (cached) {
+        console.log("Devolviendo asignaturas DESDE CACHÉ Redis");
+        return res.json(JSON.parse(cached));
+      }
+    }
+
+    // 2) No hay caché o Redis no está ready → ir a la BD
     const rows = await prisma.$queryRaw`
       WITH periodo_activo AS (
         SELECT id
@@ -87,6 +122,14 @@ app.get("/inscripcion/asignaturas", async (_req, res) => {
       GROUP BY g.id, g.codigo, g.nombre, g.creditos, g.secciones
       ORDER BY g.codigo;
     `;
+
+    // 3) Guardar en caché para próximos requests
+    if (redis.status === "ready") {
+      redis
+        .set(CACHE_KEY, JSON.stringify(rows), "EX", CACHE_TTL_SECONDS)
+        .catch((err) => console.error("Error guardando cache Redis:", err.message));
+    }
+
     res.json(rows);
   } catch (e) {
     console.error(e);
@@ -95,10 +138,10 @@ app.get("/inscripcion/asignaturas", async (_req, res) => {
 });
 
 // -----------------------------------------------------------------------------
-// GET /inscripcion/alumnos/:alumnoRef/asignaturas?periodoId=#
-// Devuelve las asignaturas (aplanadas) que el alumno tiene inscritas/preinscritas
+// GET /alumnos/:alumnoRef/asignaturas
+// (Gateway: /inscripcion/alumnos/:alumnoRef/asignaturas)
 // -----------------------------------------------------------------------------
-app.get("/inscripcion/alumnos/:alumnoRef/asignaturas", async (req, res) => {
+app.get("/alumnos/:alumnoRef/asignaturas", async (req, res) => {
   const { alumnoRef } = req.params;
   const { periodoId } = req.query;
 
@@ -146,10 +189,10 @@ app.get("/inscripcion/alumnos/:alumnoRef/asignaturas", async (req, res) => {
 });
 
 // -----------------------------------------------------------------------------
-// POST /inscripcion/inscripciones
-// Crea una inscripción si hay cupos y cumple prerrequisitos
+// POST /inscripciones
+// (Gateway: /inscripcion/inscripciones)
 // -----------------------------------------------------------------------------
-app.post("/inscripcion/inscripciones", async (req, res) => {
+app.post("/inscripciones", async (req, res) => {
   const { alumnoRef, seccionId } = req.body;
   if (!alumnoRef || !seccionId) {
     return res
@@ -159,7 +202,6 @@ app.post("/inscripcion/inscripciones", async (req, res) => {
 
   try {
     const result = await prisma.$transaction(async (tx) => {
-      // 1) Sección
       const seccion = await tx.seccion.findUnique({
         where: { id: Number(seccionId) },
         select: {
@@ -172,19 +214,16 @@ app.post("/inscripcion/inscripciones", async (req, res) => {
       });
       if (!seccion) throw new Error("Sección no existe");
 
-      // 2) Duplicado
       const dup = await tx.inscripcion.findFirst({
         where: { alumno_ref: alumnoRef, seccion_id: seccion.id },
         select: { id: true },
       });
       if (dup) throw new Error("Ya inscrito en esta sección");
 
-      // 3) Cupos
       if (seccion.cupos_tomados >= seccion.cupos_totales) {
         throw new Error("Sin cupos disponibles");
       }
 
-      // 4) Prerrequisitos
       const reqs = await tx.prerrequisito.findMany({
         where: { asignatura_id: seccion.asignatura_id },
         select: { asignatura_requerida_id: true },
@@ -192,7 +231,6 @@ app.post("/inscripcion/inscripciones", async (req, res) => {
       const requiredIds = reqs.map((r) => r.asignatura_requerida_id);
 
       if (requiredIds.length > 0) {
-        // Asignaturas requeridas que el alumno ya tiene (en otro período) con estado INSCRITA
         const ok = await tx.inscripcion.findMany({
           where: {
             alumno_ref: alumnoRef,
@@ -220,12 +258,10 @@ app.post("/inscripcion/inscripciones", async (req, res) => {
         }
       }
 
-      // 5) Crear inscripción
       const nueva = await tx.inscripcion.create({
         data: { alumno_ref: alumnoRef, seccion_id: seccion.id, estado: "INSCRITA" },
       });
 
-      // 6) Actualizar cupos
       await tx.seccion.update({
         where: { id: seccion.id },
         data: { cupos_tomados: { increment: 1 } },
@@ -242,10 +278,10 @@ app.post("/inscripcion/inscripciones", async (req, res) => {
 });
 
 // -----------------------------------------------------------------------------
-// GET /inscripcion/alumno-estado/:alumnoRef
-// Consulta el estado financiero del alumno (mapeado a formato frontend)
+// GET /alumno-estado/:alumnoRef
+// (Gateway: /inscripcion/alumno-estado/:alumnoRef)
 // -----------------------------------------------------------------------------
-app.get("/inscripcion/alumno-estado/:alumnoRef", async (req, res) => {
+app.get("/alumno-estado/:alumnoRef", async (req, res) => {
   const { alumnoRef } = req.params;
   try {
     const estado = await prisma.alumnoEstado.findUnique({
@@ -257,7 +293,6 @@ app.get("/inscripcion/alumno-estado/:alumnoRef", async (req, res) => {
       return res.status(404).json({ error: "Alumno no encontrado en el registro financiero" });
     }
 
-    // Devuelve el formato que el frontend espera
     return res.json({
       alumno_ref: estado.alumno_ref,
       estado_matricula: estado.matricula_pagada ? "PAGADA" : "PENDIENTE",
@@ -270,10 +305,10 @@ app.get("/inscripcion/alumno-estado/:alumnoRef", async (req, res) => {
 });
 
 // -----------------------------------------------------------------------------
-// PATCH /inscripcion/alumno-estado/:alumnoRef
-// Actualiza o inserta el estado de matrícula del alumno
+// PATCH /alumno-estado/:alumnoRef
+// (Gateway: /inscripcion/alumno-estado/:alumnoRef)
 // -----------------------------------------------------------------------------
-app.patch("/inscripcion/alumno-estado/:alumnoRef", async (req, res) => {
+app.patch("/alumno-estado/:alumnoRef", async (req, res) => {
   const { alumnoRef } = req.params;
   const { matricula_pagada, observacion } = req.body;
 
@@ -295,16 +330,15 @@ app.patch("/inscripcion/alumno-estado/:alumnoRef", async (req, res) => {
   }
 });
 
-
 // -----------------------------------------------------------------------------
 // Healthchecks (para orquestadores)
 // -----------------------------------------------------------------------------
-app.get("/inscripcion/healthz", (_req, res) => res.sendStatus(200));
-app.get("/inscripcion/ready", (_req, res) => res.sendStatus(200));
+app.get("/healthz", (_req, res) => res.sendStatus(200));
+app.get("/ready", (_req, res) => res.sendStatus(200));
 
 // -----------------------------------------------------------------------------
 // Start
 // -----------------------------------------------------------------------------
-app.listen(PORT, () => {
-  console.log(`API Inscripción corriendo en http://localhost:${PORT}/inscripcion`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`API Inscripción corriendo en http://localhost:${PORT}`);
 });

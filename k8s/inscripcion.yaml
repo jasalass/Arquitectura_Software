@@ -22,19 +22,28 @@ spec:
           env:
             - name: PORT
               value: "5000"
-            # Prisma usando PgBouncer
             - name: DATABASE_URL
               value: "postgresql://appuser:appsecret@pgbouncer:6432/inscripciones?schema=public"
-          # Healthchecks alineados con tu código
+            - name: REDIS_HOST
+              value: "redis"
+            - name: REDIS_PORT
+              value: "6379"
+          resources:
+            requests:
+              cpu: "150m"
+              memory: "256Mi"
+            limits:
+              cpu: "700m"
+              memory: "512Mi"
           readinessProbe:
             httpGet:
-              path: /inscripcion/ready
+              path: /ready
               port: 5000
             initialDelaySeconds: 10
             periodSeconds: 10
           livenessProbe:
             httpGet:
-              path: /inscripcion/healthz
+              path: /healthz
               port: 5000
             initialDelaySeconds: 20
             periodSeconds: 20

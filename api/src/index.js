@@ -98,9 +98,11 @@ app.post('/auth-id', async (req, res) => {
 // Express recorta el prefijo y http-proxy-middleware recibe p.ej. "/health".
 // Volvemos a anteponer "/inscripcion" para el micro.
 app.use('/inscripcion', createProxyMiddleware({
-  target: INSCRIPCION_BASE_URL,  // http://inscripcion:5000
+  target: INSCRIPCION_BASE_URL,
   changeOrigin: true,
-  pathRewrite: (path) => `/inscripcion${path}`,
+  pathRewrite: {
+    '^/inscripcion': '',  // ❗ Quita el prefijo
+  },
   logLevel: 'debug',
 }));
 
