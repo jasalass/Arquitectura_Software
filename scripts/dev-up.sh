@@ -18,6 +18,9 @@ else
   echo "[1/12] ✔ Minikube ya está activo."
 fi
 
+echo "[2.X] 🌐 Habilitando Ingress de Minikube..."
+minikube addons enable ingress >/dev/null 2>&1 || true
+
 # ------------------------------
 # 2. Habilitar metrics-server (requisito para HPA)
 # ------------------------------
@@ -139,6 +142,9 @@ echo "⏳ Esperando a que Inscripción esté disponible..."
 minikube kubectl -- rollout status deploy/inscripcion -n sgal --timeout=180s
 
 echo "✔ Inscripción arriba."
+
+echo "[10.5/11] 🌐 Aplicando Ingress para API Gateway y Front..."
+minikube kubectl -- apply -n sgal -f k8s/ingress-gateway.yaml
 
 # ------------------------------
 # 11. Otros microservicios + HPA

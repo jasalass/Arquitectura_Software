@@ -4,6 +4,7 @@
 # ============================================
 
 execution:
+
   # ============================
   # TRAMO 5: 800 usuarios
   # ============================
@@ -11,7 +12,6 @@ execution:
     ramp-up: 1m
     hold-for: 2m
     scenario: flujo-completo-gateway
-
 
 
 scenarios:
@@ -28,7 +28,7 @@ scenarios:
       # 1) LOGIN
       # ===============================================
       - label: login-email
-        url: http://192.168.49.2:32000/auth
+        url: http://api.utf.local/auth
         method: POST
         headers:
           Content-Type: application/json
@@ -47,7 +47,7 @@ scenarios:
       # 2) INSCRIPCIÓN – Asignaturas disponibles
       # ===============================================
       - label: ver-asignaturas
-        url: http://192.168.49.2:32000/inscripcion/asignaturas
+        url: http://api.utf.local/inscripcion/asignaturas
         method: GET
         headers:
           Authorization: "Bearer ${token}"
@@ -56,7 +56,7 @@ scenarios:
       # 3) INSCRIPCIÓN – Asignaturas inscritas
       # ===============================================
       - label: ver-inscripciones-alumno
-        url: http://192.168.49.2:32000/inscripcion/alumnos/${user_uuid}/asignaturas
+        url: http://api.utf.local/inscripcion/alumnos/${user_uuid}/asignaturas
         method: GET
         headers:
           Authorization: "Bearer ${token}"
@@ -65,7 +65,7 @@ scenarios:
       # 4) INSCRIPCIÓN – Estado académico del alumno
       # ===============================================
       - label: estado-alumno-inscripcion
-        url: http://192.168.49.2:32000/inscripcion/alumno-estado/${user_uuid}
+        url: http://api.utf.local/inscripcion/alumno-estado/${user_uuid}
         method: GET
         headers:
           Authorization: "Bearer ${token}"
@@ -74,7 +74,7 @@ scenarios:
       # 5) PAGO – Estado financiero
       # ===============================================
       - label: estado-pago
-        url: http://192.168.49.2:32000/pago/estado/${user_uuid}
+        url: http://api.utf.local/pago/estado/${user_uuid}
         method: GET
         headers:
           Authorization: "Bearer ${token}"
@@ -83,7 +83,7 @@ scenarios:
       # 6) PAGO – Pago de matrícula
       # ===============================================
       - label: pagar-matricula
-        url: http://192.168.49.2:32000/pago/pagar-matricula
+        url: http://api.utf.local/pago/pagar-matricula
         method: POST
         headers:
           Content-Type: application/json
