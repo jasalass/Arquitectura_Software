@@ -1,0 +1,94 @@
+# ============================================
+# Prueba escalonada contra API Gateway UTF
+# Kubernetes + Minikube
+# ============================================
+
+execution:
+  # ============================
+  # TRAMO 1: 50 usuarios
+  # ============================
+  - concurrency: 50
+    ramp-up: 30s
+    hold-for: 2m
+    scenario: flujo-completo-gateway
+
+  
+
+scenarios:
+  flujo-completo-gateway:
+    # Pequeña pausa entre peticiones de un mismo usuario virtual
+    think-time: 0.3s
+
+    # IMPORTANTE: usamos URL COMPLETA en cada request
+    # para evitar cualquier problema de host vacío o default-address.
+
+    requests:
+
+      # ===============================================
+      # 1) LOGIN
+      # ===============================================
+      - label: login-email
+        url: http://api.utf.local/auth
+        method: POST
+        headers:
+          Content-Type: application/json
+        body: |
+          {
+            "email": "user@email.com",
+            "password": "12345"
+          }
+        extract-jsonpath:
+          token:
+            jsonpath: $.token
+          user_uuid:
+            jsonpath: $.user.uuid
+
+      # ===============================================
+      # 2) INSCRIPCIÓN – Asignaturas disponibles
+      # ===============================================
+      - label: ver-asignaturas
+        url: http://api.utf.local/inscripcion/asignaturas
+        method: GET
+        headers:
+          Authorization: "Bearer ${token}"
+
+      # ===============================================
+      # 3) INSCRIPCIÓN – Asignaturas inscritas
+      # ===============================================
+      - label: ver-inscripciones-alumno
+        url: http://api.utf.local/inscripcion/alumnos/${user_uuid}/asignaturas
+        method: GET
+        headers:
+          Authorization: "Bearer ${token}"
+
+      # ===============================================
+      # 4) INSCRIPCIÓN – Estado académico del alumno
+      # ===============================================
+      - label: estado-alumno-inscripcion
+        url: http://api.utf.local/inscripcion/alumno-estado/${user_uuid}
+        method: GET
+        headers:
+          Authorization: "Bearer ${token}"
+
+      # ===============================================
+      # 5) PAGO – Estado financiero
+      # ===============================================
+      - label: estado-pago
+        url: http://api.utf.local/pago/estado/${user_uuid}
+        method: GET
+        headers:
+          Authorization: "Bearer ${token}"
+
+      # ===============================================
+      # 6) PAGO – Pago de matrícula
+      # ===============================================
+      - label: pagar-matricula
+        url: http://api.utf.local/pago/pagar-matricula
+        method: POST
+        headers:
+          Content-Type: application/json
+          Authorization: "Bearer ${token}"
+        body: |
+          {
+            "uuid": "${user_uuid}"
+          }

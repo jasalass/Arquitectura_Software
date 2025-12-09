@@ -1,0 +1,56 @@
+---
+execution:
+- concurrency: 1500
+  hold-for: 3m
+  ramp-up: 1m
+  scenario: flujo-completo-gateway
+scenarios:
+  flujo-completo-gateway:
+    requests:
+    - body: |
+        {
+          "email": "user@email.com",
+          "password": "12345"
+        }
+      extract-jsonpath:
+        token:
+          jsonpath: $.token
+        user_uuid:
+          jsonpath: $.user.uuid
+      headers:
+        Content-Type: application/json
+      label: login-email
+      method: POST
+      url: http://api.utf.local/auth
+    - headers:
+        Authorization: Bearer ${token}
+      label: ver-asignaturas
+      method: GET
+      url: http://api.utf.local/inscripcion/asignaturas
+    - headers:
+        Authorization: Bearer ${token}
+      label: ver-inscripciones-alumno
+      method: GET
+      url: http://api.utf.local/inscripcion/alumnos/${user_uuid}/asignaturas
+    - headers:
+        Authorization: Bearer ${token}
+      label: estado-alumno-inscripcion
+      method: GET
+      url: http://api.utf.local/inscripcion/alumno-estado/${user_uuid}
+    - headers:
+        Authorization: Bearer ${token}
+      label: estado-pago
+      method: GET
+      url: http://api.utf.local/pago/estado/${user_uuid}
+    - body: |
+        {
+          "uuid": "${user_uuid}"
+        }
+      headers:
+        Authorization: Bearer ${token}
+        Content-Type: application/json
+      label: pagar-matricula
+      method: POST
+      url: http://api.utf.local/pago/pagar-matricula
+    think-time: 0.3s
+

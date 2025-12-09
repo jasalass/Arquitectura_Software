@@ -1,65 +1,77 @@
 # ============================================
-# Prueba escalonada contra API Gateway UTF
-# Kubernetes + Minikube
+# Prueba escalonada completa
+# Login + consultas + toma de ramos + pagos
+# Contra API Gateway UTF (Ingress: api.utf.local)
 # ============================================
+
+settings:
+  env:
+    BASE_URL: http://api.utf.local
+  # Opcional: timeouts algo más altos
+  http:
+    timeout: 30s
 
 execution:
   # ============================
-  # TRAMO 1: 50 usuarios
-  # ============================
-  - concurrency: 50
-    ramp-up: 30s
-    hold-for: 2m
-    scenario: flujo-completo-gateway
-
-  # ============================
-  # TRAMO 2: 100 usuarios
+  # TRAMO 1: 100 usuarios
   # ============================
   - concurrency: 100
     ramp-up: 30s
     hold-for: 2m
-    scenario: flujo-completo-gateway
+    scenario: flujo-completo-toma-ramos
 
   # ============================
-  # TRAMO 3: 300 usuarios
+  # TRAMO 2: 300 usuarios
   # ============================
   - concurrency: 300
     ramp-up: 45s
-    hold-for: 2m
-    scenario: flujo-completo-gateway
+    hold-for: 3m
+    scenario: flujo-completo-toma-ramos
 
   # ============================
-  # TRAMO 4: 600 usuarios
+  # TRAMO 3: 500 usuarios
   # ============================
-  - concurrency: 600
-    ramp-up: 1m
-    hold-for: 2m
-    scenario: flujo-completo-gateway
-
-  # ============================
-  # TRAMO 5: 800 usuarios
-  # ============================
-  - concurrency: 800
-    ramp-up: 1m
-    hold-for: 2m
-    scenario: flujo-completo-gateway
-
-  # ============================
-  # TRAMO 6: 1000 usuarios
-  # ============================
-  - concurrency: 1000
+  - concurrency: 500
     ramp-up: 1m
     hold-for: 3m
-    scenario: flujo-completo-gateway
+    scenario: flujo-completo-toma-ramos
+
+  # ============================
+  # TRAMO 4: 1000 usuarios
+  # ============================
+  - concurrency: 1000
+    ramp-up: 90s
+    hold-for: 3m
+    scenario: flujo-completo-toma-ramos
+
+  # ============================
+  # TRAMO 5: 3000 usuarios
+  # ============================
+  - concurrency: 3000
+    ramp-up: 2m
+    hold-for: 3m
+    scenario: flujo-completo-toma-ramos
+
+  # ============================
+  # TRAMO 6: 5000 usuarios
+  # ============================
+  - concurrency: 5000
+    ramp-up: 3m
+    hold-for: 3m
+    scenario: flujo-completo-toma-ramos
+
+  # ============================
+  # TRAMO 7: 10000 usuarios
+  # ============================
+  - concurrency: 10000
+    ramp-up: 4m
+    hold-for: 3m
+    scenario: flujo-completo-toma-ramos
 
 
 scenarios:
-  flujo-completo-gateway:
-    # Pequeña pausa entre peticiones de un mismo usuario virtual
+  flujo-completo-toma-ramos:
     think-time: 0.3s
-
-    # IMPORTANTE: usamos URL COMPLETA en cada request
-    # para evitar cualquier problema de host vacío o default-address.
 
     requests:
 
@@ -67,7 +79,7 @@ scenarios:
       # 1) LOGIN
       # ===============================================
       - label: login-email
-        url: http://api.utf.local/auth
+        url: ${BASE_URL}/auth
         method: POST
         headers:
           Content-Type: application/json
@@ -84,45 +96,69 @@ scenarios:
 
       # ===============================================
       # 2) INSCRIPCIÓN – Asignaturas disponibles
+      #    Además extraemos una sección con cupos
+      #    para usarla en la toma de ramos
       # ===============================================
       - label: ver-asignaturas
-        url: http://api.utf.local/inscripcion/asignaturas
+        url: ${BASE_URL}/inscripcion/asignaturas
         method: GET
         headers:
           Authorization: "Bearer ${token}"
+        extract-jsonpath:
+          # Tomamos la primera seccion del primer elemento
+          # del array. Si falla, usamos default 4.
+          seccion_id:
+            jsonpath: $[0].secciones[0].id
+            default: 4
 
       # ===============================================
-      # 3) INSCRIPCIÓN – Asignaturas inscritas
+      # 3) INSCRIPCIÓN – Tomar un ramo
+      #    POST /inscripcion/inscripciones
+      # ===============================================
+      - label: tomar-ramo
+        url: ${BASE_URL}/inscripcion/inscripciones
+        method: POST
+        headers:
+          Content-Type: application/json
+          Authorization: "Bearer ${token}"
+        body: |
+          {
+            "alumnoRef": "${user_uuid}",
+            "seccionId": ${seccion_id}
+          }
+
+      # ===============================================
+      # 4) INSCRIPCIÓN – Asignaturas inscritas del alumno
       # ===============================================
       - label: ver-inscripciones-alumno
-        url: http://api.utf.local/inscripcion/alumnos/${user_uuid}/asignaturas
+        url: ${BASE_URL}/inscripcion/alumnos/${user_uuid}/asignaturas
         method: GET
         headers:
           Authorization: "Bearer ${token}"
 
       # ===============================================
-      # 4) INSCRIPCIÓN – Estado académico del alumno
+      # 5) INSCRIPCIÓN – Estado académico del alumno
       # ===============================================
       - label: estado-alumno-inscripcion
-        url: http://api.utf.local/inscripcion/alumno-estado/${user_uuid}
+        url: ${BASE_URL}/inscripcion/alumno-estado/${user_uuid}
         method: GET
         headers:
           Authorization: "Bearer ${token}"
 
       # ===============================================
-      # 5) PAGO – Estado financiero
+      # 6) PAGO – Estado financiero
       # ===============================================
       - label: estado-pago
-        url: http://api.utf.local/pago/estado/${user_uuid}
+        url: ${BASE_URL}/pago/estado/${user_uuid}
         method: GET
         headers:
           Authorization: "Bearer ${token}"
 
       # ===============================================
-      # 6) PAGO – Pago de matrícula
+      # 7) PAGO – Pago de matrícula
       # ===============================================
       - label: pagar-matricula
-        url: http://api.utf.local/pago/pagar-matricula
+        url: ${BASE_URL}/pago/pagar-matricula
         method: POST
         headers:
           Content-Type: application/json
