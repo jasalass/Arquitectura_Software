@@ -39,7 +39,7 @@ execution:
   # ============================
   # TRAMO 4: 1000 usuarios
   # ============================
-  - concurrency: 1000
+  - concurrency: 600
     ramp-up: 90s
     hold-for: 3m
     scenario: flujo-completo-toma-ramos
@@ -47,7 +47,7 @@ execution:
   # ============================
   # TRAMO 5: 3000 usuarios
   # ============================
-  - concurrency: 3000
+  - concurrency: 800
     ramp-up: 2m
     hold-for: 3m
     scenario: flujo-completo-toma-ramos
@@ -55,7 +55,7 @@ execution:
   # ============================
   # TRAMO 6: 5000 usuarios
   # ============================
-  - concurrency: 5000
+  - concurrency: 1000
     ramp-up: 3m
     hold-for: 3m
     scenario: flujo-completo-toma-ramos
@@ -63,7 +63,7 @@ execution:
   # ============================
   # TRAMO 7: 10000 usuarios
   # ============================
-  - concurrency: 10000
+  - concurrency: 1300
     ramp-up: 4m
     hold-for: 3m
     scenario: flujo-completo-toma-ramos
@@ -111,22 +111,7 @@ scenarios:
             jsonpath: $[0].secciones[0].id
             default: 4
 
-      # ===============================================
-      # 3) INSCRIPCIÓN – Tomar un ramo
-      #    POST /inscripcion/inscripciones
-      # ===============================================
-      - label: tomar-ramo
-        url: ${BASE_URL}/inscripcion/inscripciones
-        method: POST
-        headers:
-          Content-Type: application/json
-          Authorization: "Bearer ${token}"
-        body: |
-          {
-            "alumnoRef": "${user_uuid}",
-            "seccionId": ${seccion_id}
-          }
-
+      
       # ===============================================
       # 4) INSCRIPCIÓN – Asignaturas inscritas del alumno
       # ===============================================
