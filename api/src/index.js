@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import helmet from 'helmet'; 
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
 // Cargar variables de entorno
@@ -9,6 +10,47 @@ dotenv.config();
 // Inicializar Express
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// ==================================================
+//  Seguridad HTTP básica
+// ==================================================
+
+// Quitar header "X-Powered-By: Express"
+app.disable('x-powered-by');
+
+//  Helmet: agrega X-Content-Type-Options, X-Frame-Options, etc.
+//   y definimos una CSP sencilla pero suficiente para el examen.
+app.use(
+  helmet({
+    // ya tienes la CSP definida, puedes dejarla como está
+    contentSecurityPolicy: {
+      useDefaults: false,
+      directives: {
+        defaultSrc: ["'none'"],
+        connectSrc: ["'self'"],
+        scriptSrc: ["'none'"],
+        styleSrc: ["'none'"],
+        imgSrc: ["'none'"],
+        fontSrc: ["'none'"],
+        objectSrc: ["'none'"],
+        mediaSrc: ["'none'"],
+        frameSrc: ["'none'"],
+        childSrc: ["'none'"],
+        frameAncestors: ["'none'"],
+        workerSrc: ["'none'"],
+        manifestSrc: ["'none'"],
+        baseUri: ["'none'"],
+        formAction: ["'none'"],
+        upgradeInsecureRequests: [],
+      },
+    },
+    noSniff: true,       // 👈 esto ya pide X-Content-Type-Options
+    hidePoweredBy: true, // refuerzo por si acaso
+  })
+);
+
+
+
 
 // ==================================================
 //  URLs internas (Docker) de microservicios
@@ -93,26 +135,18 @@ app.post('/auth-id', async (req, res) => {
 // ==================================================
 //  🔹 INSCRIPCION (proxy)
 // ==================================================
-//
-// Llega /inscripcion/... al gateway.
-// Express recorta el prefijo y http-proxy-middleware recibe p.ej. "/health".
-// Volvemos a anteponer "/inscripcion" para el micro.
 app.use('/inscripcion', createProxyMiddleware({
   target: INSCRIPCION_BASE_URL,
   changeOrigin: true,
   pathRewrite: {
-    '^/inscripcion': '',  // ❗ Quita el prefijo
+    '^/inscripcion': '',
   },
   logLevel: 'debug',
 }));
 
 // ==================================================
-//  🔹 PAGO  (solución definitiva)
+//  🔹 PAGO
 // ==================================================
-//
-// Dejamos de usar proxy aquí para evitar problemas de reescritura y
-// manejamos las rutas a pago usando fetch, que ya validamos que funciona
-// dentro del contenedor con http://pago:7000.
 const basePago = PAGO_BASE_URL;  // ej: http://pago:7000
 
 // GET /pago/estado/:uuid
