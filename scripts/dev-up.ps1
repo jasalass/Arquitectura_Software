@@ -1,66 +1,60 @@
-# scripts/dev-up.ps1
-$ErrorActionPreference = "Stop"
+Write-Host "========================================================="
+Write-Host "      UTF - Sistema Completo en Kubernetes (Windows)"
+Write-Host "========================================================="
 
-# === Rutas base ===
-$Root         = Split-Path $PSScriptRoot -Parent
-$InfraCompose = Join-Path $Root "infra\local\db_inscripcion\docker-compose.yml"
-$RootCompose  = Join-Path $Root "docker-compose.yml"
+# 1. Iniciar Minikube
+Write-Host "[1/12] Iniciando Minikube (4 CPU, 8GB RAM)..."
+minikube start --driver=docker --cpus=4 --memory=8192
 
-# Carpeta fija del front (lo que me indicaste)
-$FrontDir = Join-Path $Root "Front_Inscripciones"
-$FrontDockerfile = Join-Path $FrontDir "Dockerfile"
-$FrontImage = "front:dev"
-$FrontContainer = "front-dev"
-$FrontPort = 8100
+# 2. Habilitar addons
+Write-Host "[2/12] Habilitando Ingress y metrics-server..."
+minikube addons enable ingress
+minikube addons enable metrics-server
 
-Write-Host "Creando red externa (si no existe): utf_net"
-$networks = docker network ls --format "{{.Name}}"
-if (-not ($networks -contains "utf_net")) { docker network create utf_net | Out-Null }
+# 3. Configurar Docker-env
+Write-Host "[3/12] Configurando Docker interno de Minikube..."
+& minikube -p minikube docker-env --shell powershell | Invoke-Expression
 
-Write-Host "`nLevantando DB + Adminer"
-docker compose -f "$InfraCompose" up -d
+# 4. Construir imágenes
+Write-Host "[4/12] Construyendo imágenes..."
+docker build -t api-gateway:1.0 ./api
+docker build -t auth:1.0 ./auth
+docker build -t inscripcion:1.0 ./inscripcion
+docker build -t pago:1.0 ./pago
+docker build -t front:1.0 ./Front_Inscripciones
 
-# Espera simple a Postgres healthy
-$maxWait=60; $elapsed=0; $status=$null
-while ($elapsed -lt $maxWait) {
-  $status = docker inspect --format='{{.State.Health.Status}}' pg-inscripcion-dev 2>$null
-  if ($status -eq "healthy") { break }
-  Start-Sleep -Seconds 2; $elapsed += 2
-}
+# 5. Namespace
+Write-Host "[5/12] Creando namespace sgal..."
+minikube kubectl -- create namespace sgal 2>$null
+minikube kubectl -- apply -f k8s/namespace.yaml
 
-Write-Host "Aplicando migraciones Prisma (deploy)…"
-try { docker compose -f "$RootCompose" run --rm inscripcion npx prisma migrate deploy } catch { }
+# 6. Postgres
+Write-Host "[6/12] Desplegando Postgres..."
+minikube kubectl -- apply -n sgal -f k8s/postgres.yaml
+minikube kubectl -- rollout status deploy/postgres -n sgal
 
-Write-Host "`nLevantando servicios de aplicación…"
-try { docker compose -f "$RootCompose" up -d } catch { }
+# 7. PgBouncer
+Write-Host "[7/12] Desplegando PgBouncer..."
+minikube kubectl -- apply -n sgal -f k8s/pgbouncer.yaml
+minikube kubectl -- rollout status deploy/pgbouncer -n sgal
 
-Write-Host "`n=== FRONTEND ANGULAR/IONIC ==="
-# Opción A: si existe servicio front/frontend en compose, úsalo
-$services = (docker compose -f "$RootCompose" config --services) 2>$null
-if ($services -and ($services -contains "front" -or $services -contains "frontend")) {
-  $frontServiceName = ( @("front","frontend") | Where-Object { $services -contains $_ } | Select-Object -First 1 )
-  docker compose -f "$RootCompose" up -d $frontServiceName
-}
-# Opción B: construir desde ./Front_Inscripciones
-elseif (Test-Path $FrontDockerfile) {
-  Write-Host "Construyendo imagen '$FrontImage' desde $FrontDir…"
-  docker build -t $FrontImage "$FrontDir"
+# 8. Redis
+Write-Host "[8/12] Desplegando Redis..."
+minikube kubectl -- apply -n sgal -f k8s/redis.yaml
+minikube kubectl -- rollout status deploy/redis -n sgal
 
-  $existing = docker ps -a --filter "name=$FrontContainer" --format "{{.Names}}"
-  if ($existing -eq $FrontContainer) { docker rm -f $FrontContainer | Out-Null }
+# 9. Microservicios
+Write-Host "[9/12] Desplegando microservicios..."
+minikube kubectl -- apply -n sgal -f k8s/auth.yaml
+minikube kubectl -- apply -n sgal -f k8s/inscripcion.yaml
+minikube kubectl -- apply -n sgal -f k8s/pago.yaml
+minikube kubectl -- apply -n sgal -f k8s/api-gateway.yaml
+minikube kubectl -- apply -n sgal -f k8s/front.yaml
 
-  Write-Host "Levantando '$FrontContainer' en http://localhost:$FrontPort …"
-  docker run -d --name $FrontContainer --network utf_net -p "$FrontPort:80" $FrontImage | Out-Null
-}
-else {
-  Write-Warning "No existe servicio 'front' en compose ni Dockerfile en $FrontDir"
-}
+# 10. Mostrar servicios
+Write-Host "[10/12] Servicios activos:"
+minikube kubectl -- get svc -n sgal
 
-Write-Host "`n=== TODO ARRIBA ==="
-Write-Host " - Adminer:              http://localhost:8080"
-Write-Host " - Postgres:             127.0.0.1:5433  (user=appuser pass=appsecret db=inscripciones)"
-Write-Host " - API Gateway:          http://localhost:3000"
-Write-Host " - Auth:                 http://localhost:4000"
-Write-Host " - Inscripción:          http://localhost:5000"
-Write-Host " - Pago:                 http://localhost:7000"
-Write-Host " - Front Angular/Ionic:  http://localhost:$FrontPort"
+Write-Host "========================================================="
+Write-Host "Sistema levantado correctamente"
+Write-Host "========================================================="
